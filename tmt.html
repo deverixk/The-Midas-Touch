@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Config-->
+        <title>The Midas Touch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Erick Vazquez">
+        <meta name="description" content="The Midas Touch – Tecnología NFC premium. El poder de un toque.">
+        <meta name="keywords" content="NFC, tarjetas, etiquetas NFC, contacto, tecnología">
+
+        <!--Iconos-->
+        <link rel="icon" type="image/png" href="assets/images/icons/minimalist-ico.png">
+        <!-- Icono para Apple (iPhone/iPad) -->
+        <link rel="apple-touch-icon" href="assets/images/icons/minimalist-ico.png">
+        <meta name="msapplication-TileImage" content="assets/images/icons/minimalist-ico.png">
+        <meta name="msapplication-TileColor" content="#000000">
+
+        <!-- Colores de la barra -->
+        <meta name="theme-color" content="#FFCD00">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- Personalizacion del Link -->
+        <meta property="og:title" content="The Midas Touch">
+        <meta property="og:description" content="Tecnología NFC premium.">
+        <meta property="og:image" content="assets/images/logos/Minimalist.png">
+        <meta property="og:url" content="https://proximamente.com">
+        <meta property="og:type" content="website">
+
+        <!--Fuentes-->
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <!--Estilos-->
+        <link rel="stylesheet" href="styles_desktop.css">
+        <link rel="stylesheet" href="styles_movil.css">
+
+        <!--Recarga de la pagina-->
+        <script>
+        if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+        }
+        </script>
+
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.webmanifest">
+        <!-- iOS PWA Support -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- Iconos para iOS -->
+        <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    </head>
+
+    <body>
+        <!-- Loader 3D -->
+        <div class="loader-3d" id="loader3D">
+            <div id="canvas3D"></div>
+        </div>
+
+        <!-- Sección Hero -->
+        <section class="hero-section" id="heroSection">
+
+            <!-- Spotlight Atmosférico -->
+            <div id="atmosSpotlight"></div>
+
+            <!-- Spotlight Background Layer -->
+            <div class="spotlight-bg">
+                <img src="assets/images/bg/fondotmt.png" class="spotlight-img desktop" alt="">
+                <img src="assets/images/bg/fondotmt movil.png" class="spotlight-img mobile" alt="">
+            </div>
+
+            <!-- Mandalas decorativos -->
+            <div class="mandala-container">
+                <img src="assets/images/recursos/Mandala_gris.png" alt="Mandala" class="mandala mandala-gris">
+                <img src="assets/images/recursos/Mandala_dorado.png" alt="Mandala" class="mandala mandala-dorado">
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="hero-content">
+                <div class="nfc-logo">
+                    <img src="assets/images/logos/Minimalist.png" alt="NFC Logo">
+                </div>
+
+                <h1 class="main-title" id="mainTitle" data-greek="ΤΗΕ ΜΙΔΑΣ ΤΟΥCΗ" data-final="THE MIDAS TOUCH">ΤΗΕ ΜΙΔΑΣ ΤΟΥCΗ</h1>
+                
+                <p class="subtitle" id="subtitle" data-greek="ΕΛ ΠΟΔΕΡ ΔΕ ΥΝ ΤΟQΥΕ" data-final="EL PODER DE UN TOQUE">ΕΛ ΠΟΔΕΡ ΔΕ ΥΝ ΤΟQΥΕ</p>
+
+                <button class="midas-button" id="scrollButton">Descender</button>
+            </div>
+        </section>
+
+    <!--Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/environments/RoomEnvironment.js"></script>
+        <script src="loader-3d.js"></script>
+        <script src="animations.js"></script>
+        <script src="spotlight.js"></script>
+        <script src="sidebar.js"></script>
+        <script src="inicio-magnetic.js"></script>
+        <script src="productos-carousel.js"></script>
+        <script src="product-3d-viewer.js"></script>
+        <script src="product-3d-viewer.js"></script>
+        <script src="sw.js"></script>
+
+        <!-- Header Fijo -->
+        <header class="main-header" id="mainHeader">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="assets/images/logos/Minimalist.png" alt="The Midas Touch Logo">
+                    <span class="header-title">The Midas Touch</span>
+                </div>
+
+                <!-- Navegación Desktop -->
+                <nav class="header-nav desktop-nav">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#productos" class="nav-link">Productos</a>
+                    <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="#carrito" class="nav-link">Carrito</a>
+                    <a href="#acerca" class="nav-link">Acerca de</a>
+                    <button class="icon-button">
+                        <img src="assets/images/icons/goldenprofile.png" alt="Usuario">
+                    </button>
+                </nav>
+
+                <!-- Botón Hamburguesa (Móvil) -->
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Sidebar Móvil -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <!-- Logo integrado elegantemente -->
+            <div class="sidebar-header">
+                <img src="assets/images/logos/Minimalist.png" alt="The Midas Touch" class="sidebar-logo">
+                <button class="sidebar-close" id="sidebarClose">
+                    <span>×</span>
+                </button>
+            </div>
+
+            <!-- Mandalas de fondo -->
+            <div class="sidebar-mandalas">
+                <img src="assets/images/recursos/Mandala_gris.png" alt="" class="sidebar-mandala sidebar-mandala-gris">
+                <img src="assets/images/recursos/Mandala_dorado.png" alt="" class="sidebar-mandala sidebar-mandala-dorado">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#inicio" class="sidebar-link" data-section="inicio">
+                    <img src="assets/images/icons/home-icon.png" alt="" class="sidebar-icon">
+                    <span>Inicio</span>
+                </a>
+                <a href="#productos" class="sidebar-link" data-section="productos">
+                    <img src="assets/images/icons/products-icon.png" alt="" class="sidebar-icon">
+                    <span>Productos</span>
+                </a>
+                <a href="#como-funciona" class="sidebar-link" data-section="como-funciona">
+                    <img src="assets/images/icons/info-icon.png" alt="" class="sidebar-icon">
+                    <span>Cómo funciona</span>
+                </a>
+                <a href="#contacto" class="sidebar-link" data-section="contacto">
+                    <img src="assets/images/icons/contact-icon.png" alt="" class="sidebar-icon">
+                    <span>Contacto</span>
+                </a>
+                <a href="#carrito" class="sidebar-link" data-section="carrito">
+                    <img src="assets/images/icons/cart-icon.png" alt="" class="sidebar-icon">
+                    <span>Carrito</span>
+                </a>
+                <a href="#acerca" class="sidebar-link" data-section="acerca">
+                    <img src="assets/images/icons/about-icon.png" alt="" class="sidebar-icon">
+                    <span>Acerca de</span>
+                </a>
+                <button class="sidebar-icon-button">
+                    <img src="assets/images/icons/goldenprofile.png" alt="Usuario">
+                    <span>Mi cuenta</span>
+                </button>
+            </nav>
+        </aside>
+
+         <!-- Inicio Sección -->
+        <section class="inicio-section" id="inicio">
+            
+            <!-- Mandala decorativo sutil -->
+            <svg class="inicio-mandala" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                <circle cx="100" cy="100" r="20" fill="none" stroke="currentColor" stroke-width="0.5"/>
+            </svg>
+
+                <!-- Decoración NFC: Teléfono con ondas (solo desktop) -->
+            <div class="nfc-decoration">
+                <!-- Ondas NFC expandiéndose -->
+                <div class="nfc-wave nfc-wave-1"></div>
+                <div class="nfc-wave nfc-wave-2"></div>
+                <div class="nfc-wave nfc-wave-3"></div>
+                
+                <!-- Teléfono -->
+                <div class="nfc-phone">
+                    <div class="phone-screen">
+                        <div class="phone-notch"></div>
+                        <div class="nfc-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                                <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inicio-container">
+                
+                <!-- Grid Asimétrico -->
+                <div class="inicio-grid">
+                    
+                    <!-- Título Grande (Izquierda) -->
+                    <div class="inicio-title-block">
+                        <p class="inicio-subtitle">Tecnología NFC</p>
+                        <h2 class="inicio-title">Un Toque.<br>Infinitas<br>Posibilidades.</h2>
+                        <p class="inicio-description">
+                            Sin apps. Sin códigos. Solo acerca tu teléfono y accede instantáneamente 
+                            a lo que necesitas. Así de simple es la magia del NFC.
+                        </p>
+                    </div>
+
+                    <!-- Card HERO (Grande - Instantáneo) -->
+                    <div class="card-hero" data-magnetic>
+                        <img src="assets/images/icons/lightning-icon.png" alt="Instantáneo" class="card-icon">
+                        <h3 class="card-title">Instantáneo</h3>
+                        <p class="card-description">
+                            Un simple toque y listo. No necesitas descargar apps ni escanear códigos QR. 
+                            La conexión es inmediata y sin complicaciones. Así debe ser la tecnología.
+                        </p>
+                    </div>
+
+                    <!-- Card Pequeña 1 (Universal) -->
+                    <div class="card-small card-small-1" data-magnetic>
+                        <img src="assets/images/icons/globe-icon.png" alt="Universal" class="card-icon-small">
+                        <h3 class="card-title-small">Universal</h3>
+                        <p class="card-description-small">
+                            Compatible con iPhone y Android. Funciona en todos los dispositivos modernos.
+                        </p>
+                    </div>
+
+                    <!-- Card Pequeña 2 (Personalizable) -->
+                    <div class="card-small card-small-2" data-magnetic>
+                        <img src="assets/images/icons/sparkle-icon.png" alt="Personalizable" class="card-icon-small">
+                        <h3 class="card-title-small">Personalizable</h3>
+                        <p class="card-description-small">
+                            Yo programo tu NFC exactamente como lo necesitas. Tú decides qué hace.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Botón CTA -->
+                <div class="inicio-cta">
+                    <a href="#productos" class="cta-button">
+                        <span>Descubre nuestros productos</span>
+                        <span class="cta-arrow">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+         <!-- Sección Productos -->
+        <section class="productos-section" id="productos">
+            <div class="productos-container">
+                
+                <!-- Carousel 3D -->
+                <div class="productos-carousel-3d">
+                    
+                    <!-- Detalles del producto (Izquierda) -->
+                    <div class="producto-detalles">
+                        <p class="producto-categoria" id="productoCategoria">GAMING SERIES</p>
+                        <h2 class="producto-titulo" id="productoTitulo">Tarjeta NFC Gold</h2>
+                        <p class="producto-desc" id="productoDesc">Tarjeta premium de metal con acabado dorado. Programable para contacto, redes sociales o URL personalizada.</p>
+                        <div class="producto-precio-wrapper">
+                            <span class="producto-precio" id="productoPrecio">$799</span>
+                            <span class="producto-moneda">MXN</span>
+                        </div>
+                        <button class="producto-cta" id="productoCTA">Ver detalles →</button>
+                    </div>
+
+                    <div class="productos-stack">
+                        <!-- Producto con MODELO 3D -->
+                        <div class="producto-item" data-index="active" data-3d-model="assets/models/Card3D.glb">
+                            <img src="assets/images/productos/tag-nfc.png" alt="Tag NFC">
+                        </div>
+                        <!-- Producto con MODELO 3D -->
+                        <div class="producto-item" data-index="1" data-3d-model="assets/models/tagNFC.glb">
+                            <img src="assets/images/productos/tag-nfc.png" alt="Tag NFC">
+                        </div>
+                        <!-- Producto con IMAGEN normal -->
+                        <div class="producto-item active" data-index="2">
+                             <img src="assets/images/productos/ejemplo.png" alt="Tarjeta NFC Gold">
+                        </div>
+                        <div class="producto-item" data-index="3">
+                            <img src="assets/images/productos/ejemplo.png" alt="Tag NFC">
+                        </div>
+                        <div class="producto-item" data-index="4">
+                            <img src="assets/images/productos/ejemplo.png" alt="Llavero NFC">
+                        </div>
+                        <div class="producto-item" data-index="5">
+                            <img src="assets/images/productos/ejemplo.png" alt="Pulsera NFC">
+                        </div>
+                    </div>
+
+                    <!-- Controles de navegación -->
+                    <button class="carousel-3d-btn prev" id="carousel3dPrev">
+                        <span>‹</span>
+                    </button>
+                    <button class="carousel-3d-btn next" id="carousel3dNext">
+                        <span>›</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+    </body>
+</html> 
