@@ -28,9 +28,27 @@ document.addEventListener('DOMContentLoaded', () => {
             precio: "$0"
         },
         {
-            categoria: "PROXIMAMENTE",
-            titulo: "Proximamente",
-            desc: "Proximamente.",
+            categoria: "EVENT SERIES",
+            titulo: "Tarjeta de Entradas",
+            desc: "Diseñada para accesos, eventos especiales o pases digitales con NFC.",
+            precio: "$0"
+        },
+        {
+            categoria: "GIFT SERIES",
+            titulo: "Llavero de Musica",
+            desc: "Un llavero que puedes llevar a todos lados; al contacto con tu dispositivo, abre tu canción preferida, o esa canción especial.",
+            precio: "$0"
+        },
+        {
+            categoria: "GIFT SERIES",
+            titulo: "Llavero de parejas",
+            desc: "Llavero especial revela los recuerdos más preciados; la canción que define una relación, una ubicación de primer encuentro o una fecha importante.",
+            precio: "$0"
+        },
+        {
+            categoria: "BUSINESS SERIES",
+            titulo: "MENU HOLDER",
+            desc: "Un holder menu perfecto para colocar en la mesa, o en cualquier lugar y que tus clientes puedan abrir el menú de tu establecimiento.",
             precio: "$0"
         },
         {
