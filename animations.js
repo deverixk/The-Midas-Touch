@@ -83,12 +83,9 @@ function startMainPageAnimation() {
             scrollButton.classList.add('visible');
         }, totalAnimationTime + 1000);
 
-        // Funcionalidad de scroll suave
+        // Funcionalidad de redireccionamiento a main.html
         scrollButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
+            window.location.href = 'main.html';
         });
     }
 }

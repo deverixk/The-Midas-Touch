@@ -169,7 +169,7 @@
 
 @media (max-width: 768px) {
     #scrollButton {
-        bottom: -160px !important; /* o la cantidad que quieras */
+        bottom: -80px !important; /* o la cantidad que quieras */
     }
 
     /* ===== HEADER MÓVIL ===== */
@@ -664,7 +664,7 @@
 
     /* Botones centrados abajo */
     .carousel-3d-btn {
-        bottom: -6rem; /* Baja más las flechas */
+        bottom: -1rem;
         width: 50px;
         height: 50px;
         font-size: 2rem;
