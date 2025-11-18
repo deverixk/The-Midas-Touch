@@ -2,12 +2,17 @@ const CACHE_NAME = "midas-cache-v1";
 
 const urlsToCache = [
   "/",
-  "/inicio.html",
+  "/index.html",
+  "/main.html",
   "/styles_desktop.css",
   "/styles_movil.css",
   "/loader-3d.js",
   "/spotlight.js",
   "/animations.js",
+  "/sidebar.js",
+  "/productos-carousel.js",
+  "/product-3d-viewer.js",
+  "/inicio-magnetic.js",
   "/assets/images/logos/Minimalist.png",
   "/assets/images/bg/fondotmt.png",
   "/assets/images/bg/fondotmt movil.png"
