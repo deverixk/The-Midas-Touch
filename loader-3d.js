@@ -67,7 +67,7 @@ scene.add(spot);
     const loader = new THREE.GLTFLoader();
 
     loader.load(
-        'prueba.glb', // tu ruta
+        'Logo_The_Midas_Touch.glb', // tu ruta
         function(gltf) {
             logo3D = gltf.scene;
 
