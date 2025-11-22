@@ -41,6 +41,7 @@ class Product3DViewer {
         // Iluminación dorada (igual que el loader)
         this.setupLighting();
         
+        
         // Cargar modelo
         this.loadModel();
         
