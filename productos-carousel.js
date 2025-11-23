@@ -18,25 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             categoria: "PREMIUM SERIES",
             titulo: "Tarjeta NFC",
-            desc: "Tarjeta premium. Programable para contacto, redes sociales o URL personalizada.",
+            desc: "Tarjeta premium. Programable para contacto, redes sociales o URL personalizada, diseñada para tareas específicas, presiona para ver detalles.",
             precio: "$0"
         },
         {
             categoria: "SMART SERIES",
             titulo: "Tag NFC Adhesivo",
-            desc: "Etiqueta adhesiva ultradelgada. Perfecta para practicamente cualquier tarea, desde regalos hasta automatización del hogar, negocios y menús digitales.",
+            desc: "Etiqueta adhesiva ultradelgada. Perfecta para prácticamente cualquier tarea, desde regalos hasta automatización del hogar y negocios.",
             precio: "$0"
         },
         {
             categoria: "EVENT SERIES",
             titulo: "Tarjeta de Entradas",
-            desc: "Diseñada para accesos, eventos especiales o pases digitales con NFC.",
+            desc: "Diseñada para accesos, eventos especiales o pases digitales con NFC, presiona para ver los detalles de personalización.",
             precio: "$0"
         },
         {
             categoria: "GIFT SERIES",
             titulo: "Llavero de Musica",
-            desc: "Un llavero que puedes llevar a todos lados; al contacto con tu dispositivo, abre tu canción preferida, o esa canción especial.",
+            desc: "Un llavero que puedes llevar a todos lados; al contacto con tu dispositivo, abre tu canción preferida o esa canción especial.",
             precio: "$0"
         },
         {
