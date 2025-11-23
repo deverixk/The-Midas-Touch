@@ -13,6 +13,12 @@
     font-style: normal;
 }
 
+    /* ===== FUENTES DE GOOGLE ===== */
+    /* Playfair Display - Títulos secundarios elegantes */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+    /* Inter - Cuerpo de texto legible y moderna */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 /* ===== VARIABLES Y RESET ===== */
 * {
     margin: 0;
@@ -180,6 +186,8 @@ html, body {
     text-transform: uppercase;
     margin: 0;
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    line-height: 1.65;
 }
 
 .scramble {
@@ -568,7 +576,7 @@ html, body {
 }
 
 .inicio-title {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     line-height: 1.1;
     background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
@@ -583,6 +591,8 @@ html, body {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.7;
     margin-top: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 /* ===== CARD HERO (Grande) ===== */
@@ -672,6 +682,8 @@ html, body {
     font-size: 1.05rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 /* ===== CARDS PEQUEÑAS ===== */
@@ -743,7 +755,7 @@ html, body {
 
 .card-title-small {
     font-family: 'Cinzel Decorative', serif;
-    font-size: 1.4rem;
+    font-size: 3rem;
     color: var(--gold);
     margin-bottom: 0.75rem;
 }
@@ -752,6 +764,8 @@ html, body {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.65);
     line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 /* ===== BOTÓN CTA ===== */
@@ -1011,7 +1025,7 @@ html, body {
 }
 
 .producto-titulo {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     line-height: 1.2;
     background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
@@ -1032,6 +1046,8 @@ html, body {
     opacity: 0;
     transform: translateX(-20px);
     animation: slideInLeft 0.6s ease 0.4s forwards;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 .producto-precio-wrapper {

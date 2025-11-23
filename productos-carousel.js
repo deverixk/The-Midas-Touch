@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             categoria: "BUSINESS SERIES",
-            titulo: "MENU HOLDER",
+            titulo: "Menu Holder",
             desc: "Un holder menu perfecto para colocar en la mesa, o en cualquier lugar y que tus clientes puedan abrir el menú de tu establecimiento.",
             precio: "$0"
         },
