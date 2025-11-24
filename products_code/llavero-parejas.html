@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Config-->
+    <title>Llavero de Parejas NFC - The Midas Touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Erick Vazquez">
+    <meta name="description" content="Llavero NFC especial para parejas con recuerdos y momentos únicos.">
+    <meta name="keywords" content="NFC, llavero parejas, regalo romántico, aniversario">
+
+    <!--Iconos-->
+    <link rel="icon" type="image/png" href="../assets/images/icons/logo_fullgold.webp">
+    <link rel="apple-touch-icon" href="../assets/images/icons/minimalist-ico.webp">
+    <meta name="msapplication-TileImage" content="../assets/images/icons/minimalist-ico.png">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <!-- Colores de la barra -->
+    <meta name="theme-color" content="#FFCD00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="../styles_desktop.css">
+    <link rel="stylesheet" href="../styles_movil.css">
+</head>
+
+<body>
+    <!-- Header Fijo -->
+    <header class="product-header">
+        <div class="product-header-left">
+            <a href="../main.html" class="back-button-text">
+                    ← Inicio
+            </a>
+        </div>
+            <div class="product-header-logo">
+                <img src="../assets/images/logos/Minimalist.webp" alt="The Midas Touch">
+            </div>
+        </div>
+        <div class="product-header-right">
+            <span class="header-section-label">Productos</span>
+        </div>
+    </header>
+
+    <!-- Tabs de Categorías - STICKY -->
+    <nav class="category-tabs">
+        <div class="tabs-container">
+            <a href="tarjeta-nfc.html" class="tab-item">Premium</a>
+            <a href="tag-nfc.html" class="tab-item">Smart</a>
+            <a href="llavero-disco.html" class="tab-item active">Gift</a>
+            <a href="card-holder.html" class="tab-item">Business</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal del Producto -->
+    <main class="product-page">
+        <div class="product-container">
+
+            <!-- 📝 EDITAR: Badge de Categoría -->
+            <p class="product-category">GIFT SERIES</p>
+
+            <!-- 📝 EDITAR: Nombre del Producto -->
+            <h1 class="product-name">Llavero de Parejas</h1>
+
+            <!-- MODELO 3D -->
+            <div class="product-3d-viewer" data-model="../assets/models/llavero_parejas_op.glb"></div>
+
+            <!-- 📝 EDITAR: Descripción del Producto -->
+            <p class="product-description">
+                Llavero especial diseñado para revelar los recuerdos más preciados de una relación. 
+                Guarda la canción que los define, la ubicación de su primer encuentro, 
+                fechas importantes o una galería de fotos. Un toque y reviven juntos 
+                sus momentos más especiales. El regalo perfecto para aniversarios y San Valentín.
+            </p>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- Grid de Características y Configuración -->
+            <div class="product-details-grid">
+                
+                <!-- 📝 EDITAR: Características del Producto -->
+                <div class="details-box">
+                    <h3 class="details-box-title">Características</h3>
+                    <ul class="features-list">
+                        <li>Material: Acrílico premium con acabado mate</li>
+                        <li>Chip NFC: NTAG216 (888 bytes)</li>
+                        <li>Compatibilidad: iPhone (iOS 13+) y Android</li>
+                        <li>Dimensiones: Set de 2 piezas (35mm c/u)</li>
+                        <li>Diseño: Corazones entrelazados</li>
+                        <li>Argollas metálicas incluidas</li>
+                        <li>Resistente al uso diario</li>
+                        <li>Grabado personalizable</li>
+                    </ul>
+                </div>
+
+                <!-- 📝 EDITAR: Opciones de Configuración NFC -->
+                <div class="details-box">
+                    <h3 class="details-box-title">Configuración NFC</h3>
+                    <div class="config-options">
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config1" value="song">
+                            <label for="config1">"Nuestra Canción" (Spotify/Apple Music)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config2" value="location">
+                            <label for="config2">Lugar del Primer Encuentro (GPS + fotos)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config3" value="date">
+                            <label for="config3">Fecha Importante (aniversario, contador de días)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config4" value="gallery">
+                            <label for="config4">Galería de Recuerdos (álbum de fotos privado)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config5" value="message">
+                            <label for="config5">Carta de Amor Digital (mensaje + multimedia)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config6" value="video">
+                            <label for="config6">Video Especial (YouTube/Vimeo privado)</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- 📝 EDITAR: Precio del Producto -->
+            <div class="price-cta-section">
+                <div class="price-wrapper">
+                    <span class="product-price">$PRECIO</span>
+                    <span class="price-currency">MXN</span>
+                </div>
+                <button class="configure-button">Configurar NFC</button>
+            </div>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- PRODUCTOS RELACIONADOS -->
+            <section class="related-products">
+                <h2 class="related-title">Otros productos de <span>GIFT</span></h2>
+                
+                <div class="related-gallery">
+                    
+                    <a href="llavero-disco.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Llavero de Música</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="tag-nfc.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Tag NFC Adhesivo</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="tarjeta-nfc.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Tarjeta NFC Gold</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="proximamente.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Próximamente</p>
+                        <p class="related-card-price">— MXN</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="../product-page.js"></script>
+</body>
+</html>

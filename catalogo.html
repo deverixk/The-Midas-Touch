@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Config-->
+    <title>Catálogo Completo - The Midas Touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Erick Vazquez">
+    <meta name="description" content="Catálogo completo de productos NFC premium de The Midas Touch.">
+    <meta name="keywords" content="NFC, catálogo, productos, tarjetas NFC, tecnología">
+
+    <!--Iconos-->
+    <link rel="icon" type="image/png" href="assets/images/icons/logo_fullgold.webp">
+    <link rel="apple-touch-icon" href="assets/images/icons/minimalist-ico.webp">
+    <meta name="msapplication-TileImage" content="assets/images/icons/minimalist-ico.png">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <!-- Colores de la barra -->
+    <meta name="theme-color" content="#FFCD00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="styles_desktop.css">
+    <link rel="stylesheet" href="styles_movil.css">
+</head>
+
+<body>
+    <!-- Header Fijo -->
+        <header class="main-header visible" id="mainHeader">
+            <div class="header-content">
+                <a href="index.html" class="header-logo" style="text-decoration: none;">
+                <img src="assets/images/logos/Minimalist.webp" alt="The Midas Touch Logo">
+                <span class="header-title">The Midas Touch</span>
+                </a>
+
+                <!-- Navegación Desktop -->
+                <nav class="header-nav desktop-nav">
+                    <a href="main.html#inicio" class="nav-link">Inicio</a>
+
+                    <div class="nav-dropdown">
+                        <a href="#productos" class="nav-link">
+                            Productos <span class="dropdown-arrow">▼</span>
+                        </a>
+                    <div class="dropdown-menu">
+                        <a href="catalogo.html" class="dropdown-item dropdown-item-featured">
+                            <span class="dropdown-icon"></span>
+                            <span>Ver Catálogo Completo</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a href="products_code/tarjeta-nfc.html" class="dropdown-item">
+                            <span class="dropdown-icon"></span>
+                            <span>Premium</span>
+                        </a>
+                        <a href="products_code/tag-nfc.html" class="dropdown-item">
+                            <span class="dropdown-icon"></span>
+                            <span>Smart</span>
+                        </a>
+                        <a href="products_code/llavero-disco.html" class="dropdown-item">
+                            <span class="dropdown-icon"></span>
+                            <span>Gift</span>
+                        </a>
+                        <a href="products_code/card-holder.html" class="dropdown-item">
+                            <span class="dropdown-icon"></span>
+                            <span>Business</span>
+                        </a>
+                    </div>
+                    </div>
+
+                    <a href="main.html#como-funciona" class="nav-link">Cómo funciona</a>
+                    <a href="main.html#contacto" class="nav-link">Contacto</a>
+                    <a href="main.html#carrito" class="nav-link">Carrito</a>
+                    <a href="main.html#acerca" class="nav-link">Acerca de</a>
+                    <button class="icon-button">
+                        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
+                    </button>
+                </nav>
+
+                <!-- Botón Hamburguesa (Móvil) -->
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+    <!-- Sidebar Móvil -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/images/logos/Minimalist.webp" alt="The Midas Touch" class="sidebar-logo">
+            <button class="sidebar-close" id="sidebarClose">
+                <span>×</span>
+            </button>
+        </div>
+
+        <div class="sidebar-mandalas">
+            <img src="assets/images/recursos/Mandala_gris.webp" alt="" class="sidebar-mandala sidebar-mandala-gris">
+            <img src="assets/images/recursos/Mandala_dorado.webp" alt="" class="sidebar-mandala sidebar-mandala-dorado">
+        </div>
+
+        <nav class="sidebar-nav">
+    <a href="main.html#inicio" class="sidebar-link" data-section="inicio">
+        <img src="assets/images/icons/home-icon.webp" alt="" class="sidebar-icon">
+        <span>Inicio</span>
+    </a>
+    
+    <!-- 👇 ESTRUCTURA DROPDOWN COMPLETA -->
+    <div class="sidebar-dropdown active">
+        <a href="catalogo.html" class="sidebar-link active" data-section="productos">
+            <img src="assets/images/icons/products-icon.webp" alt="" class="sidebar-icon">
+            <span>Productos</span>
+            <span class="sidebar-arrow">▼</span>
+        </a>
+        <div class="sidebar-submenu">
+            <a href="catalogo.html" class="sidebar-sublink sidebar-sublink-featured">
+                <span class="sublink-icon"></span>
+                <span>Catálogo Completo</span>
+            </a>
+            <div class="sidebar-submenu-divider"></div>
+            <a href="products_code/tarjeta-nfc.html" class="sidebar-sublink">
+                <span class="sublink-icon"></span>
+                <span>Premium</span>
+            </a>
+            <a href="products_code/tag-nfc.html" class="sidebar-sublink">
+                <span class="sublink-icon"></span>
+                <span>Smart</span>
+            </a>
+            <a href="products_code/llavero-disco.html" class="sidebar-sublink">
+                <span class="sublink-icon"></span>
+                <span>Gift</span>
+            </a>
+            <a href="products_code/card-holder.html" class="sidebar-sublink">
+                <span class="sublink-icon"></span>
+                <span>Business</span>
+            </a>
+        </div>
+    </div>
+    
+    <a href="main.html#como-funciona" class="sidebar-link" data-section="como-funciona">
+        <img src="assets/images/icons/info-icon.webp" alt="" class="sidebar-icon">
+        <span>Cómo funciona</span>
+    </a>
+    <a href="main.html#contacto" class="sidebar-link" data-section="contacto">
+        <img src="assets/images/icons/contact-icon.webp" alt="" class="sidebar-icon">
+        <span>Contacto</span>
+    </a>
+    <a href="main.html#carrito" class="sidebar-link" data-section="carrito">
+        <img src="assets/images/icons/cart-icon.webp" alt="" class="sidebar-icon">
+        <span>Carrito</span>
+    </a>
+    <a href="main.html#acerca" class="sidebar-link" data-section="acerca">
+        <img src="assets/images/icons/about-icon.webp" alt="" class="sidebar-icon">
+        <span>Acerca de</span>
+    </a>
+    <button class="sidebar-icon-button">
+        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
+        <span>Mi cuenta</span>
+    </button>
+</nav>
+    </aside>
+
+    <!-- Hero del Catálogo -->
+    <section class="catalogo-hero">
+        <div class="catalogo-hero-content">
+            <p class="catalogo-subtitle">Nuestra Colección</p>
+            <h1 class="catalogo-title">Colección ORO</h1>
+            <div class="title-decoration-catalog"></div>
+            <p class="catalogo-description">
+                Descubre toda nuestra línea de productos NFC premium. 
+                Cada pieza diseñada con precisión para transformar la forma en que conectas con el mundo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- PREMIUM SERIES -->
+    <section class="catalog-category" id="premium">
+        <div class="catalog-container">
+            <div class="category-header">
+                <h2 class="category-title">Premium Series</h2>
+                <p class="category-description">Productos de alta gama para profesionales</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 1: Tarjeta NFC -->
+                <a href="products_code/tarjeta-nfc.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-card.webp" alt="Tarjeta NFC">
+                    </div>
+                    <div class="product-card-badge">PREMIUM</div>
+                    <h3 class="product-card-name">Tarjeta NFC</h3>
+                    <p class="product-card-desc">Contacto profesional premium</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+                <!-- Más productos  -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- SMART SERIES -->
+    <section class="catalog-category" id="smart">
+        <div class="catalog-container">
+            <div class="category-header">
+                <h2 class="category-title">Smart Series</h2>
+                <p class="category-description">Soluciones versátiles para múltiples usos</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 2: Tag NFC -->
+                <a href="products_code/tag-nfc.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-tag.webp" alt="Tag NFC">
+                    </div>
+                    <div class="product-card-badge">SMART</div>
+                    <h3 class="product-card-name">Tag NFC Adhesivo</h3>
+                    <p class="product-card-desc">Etiqueta ultradelgada universal</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- GIFT SERIES -->
+    <section class="catalog-category" id="gift">
+        <div class="catalog-container">
+            <div class="category-header">
+                <h2 class="category-title">Gift Series</h2>
+                <p class="category-description">Regalos personalizados con tecnología</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 3: Llavero Disco -->
+                <a href="products_code/llavero-disco.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-disco.webp" alt="Llavero Disco">
+                    </div>
+                    <div class="product-card-badge">GIFT</div>
+                    <h3 class="product-card-name">Llavero de Música</h3>
+                    <p class="product-card-desc">Tu canción favorita en un toque</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+                <!-- Producto 4: Llavero Parejas -->
+                <a href="products_code/llavero-parejas.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-parejas.webp" alt="Llavero Parejas">
+                    </div>
+                    <div class="product-card-badge">GIFT</div>
+                    <h3 class="product-card-name">Llavero de Parejas</h3>
+                    <p class="product-card-desc">Recuerdos especiales compartidos</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- BUSINESS SERIES -->
+    <section class="catalog-category" id="business">
+        <div class="catalog-container">
+            <div class="category-header">
+                <h2 class="category-title">Business Series</h2>
+                <p class="category-description">Herramientas profesionales para negocios</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 5: Card Holder -->
+                <a href="products_code/card-holder.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-holder.webp" alt="Card Holder">
+                    </div>
+                    <div class="product-card-badge">BUSINESS</div>
+                    <h3 class="product-card-name">Menu Holder</h3>
+                    <p class="product-card-desc">Menú digital para tu negocio</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- EVENT SERIES -->
+    <section class="catalog-category" id="event">
+        <div class="catalog-container">
+            <div class="category-header">
+                <h2 class="category-title">Event Series</h2>
+                <p class="category-description">Soluciones para eventos y accesos</p>
+            </div>
+
+            <div class="products-grid">
+                
+                <!-- Producto 6: Entradas NFC -->
+                <a href="products_code/entradas-nfc.html" class="product-card">
+                    <div class="product-card-image">
+                        <!-- 📝 TÚ AGREGAS LA IMAGEN AQUÍ -->
+                        <img src="assets/images/productos/placeholder-entradas.webp" alt="Entradas NFC">
+                    </div>
+                    <div class="product-card-badge">EVENT</div>
+                    <h3 class="product-card-name">Entradas NFC</h3>
+                    <p class="product-card-desc">Tickets digitales inteligentes</p>
+                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="section-separator"></div>
+
+    <!-- SECCIÓN DE PAQUETES -->
+    <section class="packages-section">
+        <div class="catalog-container">
+            <div class="packages-header">
+                <p class="packages-subtitle">Ofertas Especiales</p>
+                <h2 class="packages-title">Paquetes "Barras de Oro"</h2>
+                <div class="title-decoration-catalog"></div>
+                <p class="packages-description">
+                    Ahorra con nuestros paquetes diseñados para diferentes necesidades. 
+                    Más productos, mejor precio.
+                </p>
+            </div>
+
+            <div class="packages-grid">
+                
+                <!-- Paquete 1: -->
+                <div class="package-card">
+                    <div class="package-icon"></div>
+                    <h3 class="package-name">Paquete ¿?</h3>
+                    <p class="package-description">Perfecto para...</p>
+                    
+                    <div class="package-includes">
+                        <p class="includes-title">Incluye:</p>
+                        <ul class="includes-list">
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="package-pricing">
+                        <p class="package-price">$... <span>MXN</span></p>
+                        <p class="package-savings">Ahorra ...%</p>
+                    </div>
+                    
+                    <button class="package-button">Solicitar Paquete</button>
+                </div>
+
+                <!-- Paquete 2: Restaurante -->
+                <div class="package-card package-featured">
+                    <div class="package-badge">MÁS POPULAR</div>
+                    <div class="package-icon"></div>
+                    <h3 class="package-name">Paquete ¿?</h3>
+                    <p class="package-description">Perfecto para...</p>
+                    
+                    <div class="package-includes">
+                        <p class="includes-title">Incluye:</p>
+                        <ul class="includes-list">
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="package-pricing">
+                        <p class="package-price">$... <span>MXN</span></p>
+                        <p class="package-savings">Ahorra ...%</p>
+                    </div>
+                    
+                    <button class="package-button">Solicitar Paquete</button>
+                </div>
+
+                <!-- Paquete 3: Eventos -->
+                <div class="package-card">
+                    <div class="package-icon"></div>
+                    <h3 class="package-name">Paquete ¿?</h3>
+                    <p class="package-description">Perfecto para...</p>
+                    
+                    <div class="package-includes">
+                        <p class="includes-title">Incluye:</p>
+                        <ul class="includes-list">
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="package-pricing">
+                        <p class="package-price">$... <span>MXN</span></p>
+                        <p class="package-savings">Ahorra ...%</p>
+                    </div>
+                    
+                    <button class="package-button">Solicitar Paquete</button>
+                </div>
+
+            </div>
+
+            <!-- CTA de paquetes personalizados -->
+            <div class="custom-package-cta">
+                <p class="custom-package-text">¿Necesitas algo diferente?</p>
+                <a href="#contacto" class="custom-package-button">Crear Paquete Personalizado</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Scripts-->
+    <script src="animations.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+</html>

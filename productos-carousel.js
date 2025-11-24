@@ -199,4 +199,37 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Inicializar
     updatePositions();
+
+    
+ // Mapeo de productos a sus páginas
+    const productPages = [
+        'products_code/tarjeta-nfc.html',      // index 0
+        'products_code/tag-nfc.html',          // index 1
+        'products_code/entradas-nfc.html',     // index 2
+        'products_code/llavero-disco.html',    // index 3
+        'products_code/llavero-parejas.html',  // index 4
+        'products_code/card-holder.html',      // index 5
+        'products_code/proximamente.html'      // index 6
+    ];
+
+    // Event listener para el botón CTA "Ver detalles"
+    const productoCTA = document.getElementById('productoCTA');
+    if (productoCTA) {
+        productoCTA.addEventListener('click', () => {
+            window.location.href = productPages[currentIndex];
+        });
+    }
+
+    // Event listener para click en el producto activo (modelo 3D)
+    if (stack) {
+        stack.addEventListener('click', (e) => {
+            const activeProduct = document.querySelector('.producto-item.active');
+            if (activeProduct && activeProduct.contains(e.target)) {
+                const index = parseInt(activeProduct.getAttribute('data-index'));
+                if (!isNaN(index) && productPages[index]) {
+                    window.location.href = productPages[index];
+                }
+            }
+        });
+    }
 });

@@ -117,7 +117,6 @@ window.addEventListener('scroll', () => {
 /* =====================================================
    SIDEBAR MÓVIL - FUNCIONALIDAD
    ===================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const sidebar = document.getElementById('sidebar');
@@ -154,9 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebarOverlay.addEventListener('click', closeSidebar);
     }
 
-    // Cerrar sidebar al hacer click en un link
+    // Cerrar sidebar al hacer click en un link (EXCEPTO dropdown)
     sidebarLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
+        link.addEventListener('click', function(e) {
+            // Si el link está dentro de un dropdown, NO cerrar sidebar
+            const isDropdown = this.closest('.sidebar-dropdown');
+            if (!isDropdown) {
+                closeSidebar();
+            }
+        });
     });
 
     // Cerrar sidebar con tecla ESC
@@ -165,4 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
             closeSidebar();
         }
     });
-});
+}); 

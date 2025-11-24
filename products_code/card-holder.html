@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Config-->
+    <title>Card Holder NFC - The Midas Touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Erick Vazquez">
+    <meta name="description" content="Holder de mesa con NFC integrado para menús digitales y negocios.">
+    <meta name="keywords" content="NFC, menu holder, negocio, restaurante, QR digital">
+
+    <!--Iconos-->
+    <link rel="icon" type="image/png" href="../assets/images/icons/logo_fullgold.webp">
+    <link rel="apple-touch-icon" href="../assets/images/icons/minimalist-ico.webp">
+    <meta name="msapplication-TileImage" content="../assets/images/icons/minimalist-ico.png">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <!-- Colores de la barra -->
+    <meta name="theme-color" content="#FFCD00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="../styles_desktop.css">
+    <link rel="stylesheet" href="../styles_movil.css">
+</head>
+
+<body>
+    <!-- Header Fijo -->
+    <header class="product-header">
+        <div class="product-header-left">
+            <a href="../main.html" class="back-button-text">
+                ← Inicio
+            </a>
+        </div>
+        <div class="product-header-logo">
+            <img src="../assets/images/logos/Minimalist.webp" alt="The Midas Touch">
+        </div>
+        <div class="product-header-right">
+            <span class="header-section-label">Productos</span>
+        </div>
+    </header>
+
+    <!-- Tabs de Categorías - STICKY -->
+    <nav class="category-tabs">
+        <div class="tabs-container">
+            <a href="tarjeta-nfc.html" class="tab-item">Premium</a>
+            <a href="tag-nfc.html" class="tab-item">Smart</a>
+            <a href="llavero-disco.html" class="tab-item">Gift</a>
+            <a href="card-holder.html" class="tab-item active">Business</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal del Producto -->
+    <main class="product-page">
+        <div class="product-container">
+
+            <!-- 📝 EDITAR: Badge de Categoría -->
+            <p class="product-category">BUSINESS SERIES</p>
+
+            <!-- 📝 EDITAR: Nombre del Producto -->
+            <h1 class="product-name">Menu Holder</h1>
+
+            <!-- MODELO 3D -->
+            <div class="product-3d-viewer" data-model="../assets/models/CardHolder_op.glb"></div>
+
+            <!-- 📝 EDITAR: Descripción del Producto -->
+            <p class="product-description">
+                Holder de mesa con tecnología NFC integrada. 
+                Perfecto para restaurantes, cafeterías, hoteles y negocios. 
+                Tus clientes solo acercan su teléfono para ver el menú digital, 
+                información del establecimiento, promociones o redes sociales. 
+                Elegante, funcional y sin contacto.
+            </p>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- Grid de Características y Configuración -->
+            <div class="product-details-grid">
+                
+                <!-- 📝 EDITAR: Características del Producto -->
+                <div class="details-box">
+                    <h3 class="details-box-title">Características</h3>
+                    <ul class="features-list">
+                        <li>Material: Acrílico premium de 5mm</li>
+                        <li>Chip NFC: NTAG216 (888 bytes)</li>
+                        <li>Compatibilidad: iPhone (iOS 13+) y Android</li>
+                        <li>Dimensiones: 100 x 150 mm (tamaño carta reducido)</li>
+                        <li>Base estable con peso equilibrado</li>
+                        <li>Resistente a líquidos y uso intensivo</li>
+                        <li>Fácil de limpiar y desinfectar</li>
+                        <li>Diseño minimalista elegante</li>
+                    </ul>
+                </div>
+
+                <!-- 📝 EDITAR: Opciones de Configuración NFC -->
+                <div class="details-box">
+                    <h3 class="details-box-title">Configuración NFC</h3>
+                    <div class="config-options">
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config1" value="menu">
+                            <label for="config1">Menú Digital (carta completa con fotos y precios)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config2" value="business-info">
+                            <label for="config2">Información del Negocio (horarios, ubicación, contacto)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config3" value="promotions">
+                            <label for="config3">Promociones y Ofertas (actualizables)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config4" value="social">
+                            <label for="config4">Redes Sociales (Instagram, Facebook, TikTok)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config5" value="reviews">
+                            <label for="config5">Reseñas (link directo a Google/TripAdvisor)</label>
+                        </div>
+                        <div class="config-option">
+                            <input type="radio" name="nfc-config" id="config6" value="wifi">
+                            <label for="config6">WiFi del Establecimiento (conexión automática)</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- 📝 EDITAR: Precio del Producto -->
+            <div class="price-cta-section">
+                <div class="price-wrapper">
+                    <span class="product-price">$PRECIO</span>
+                    <span class="price-currency">MXN</span>
+                </div>
+                <button class="configure-button">Configurar NFC</button>
+            </div>
+
+            <!-- Separador decorativo -->
+            <div class="product-divider"></div>
+
+            <!-- PRODUCTOS RELACIONADOS -->
+            <section class="related-products">
+                <h2 class="related-title">Otros productos de <span>BUSINESS</span></h2>
+                
+                <div class="related-gallery">
+                    
+                    <a href="tarjeta-nfc.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Tarjeta NFC Gold</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="tag-nfc.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Tag NFC Adhesivo</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="entradas-nfc.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Entradas NFC</p>
+                        <p class="related-card-price">$PRECIO MXN</p>
+                    </a>
+
+                    <a href="proximamente.html" class="related-card">
+                        <div class="related-card-image">
+                            <p style="color: var(--gold); font-size: 3rem;">⬛</p>
+                        </div>
+                        <p class="related-card-name">Próximamente</p>
+                        <p class="related-card-price">— MXN</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="../product-page.js"></script>
+</body>
+</html>
