@@ -3050,3 +3050,823 @@ font-size: 1.3rem;
 .cta-button-final:hover .cta-arrow {
 transform: translateX(5px);
 }
+
+/* =====================================================
+   SECCIÓN CONTACTO - FORMULARIO INTELIGENTE
+   ===================================================== */
+
+.contacto-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 8rem 3rem 6rem;
+    background: linear-gradient(180deg, #0A0A0A 0%, #0F0F0F 50%, #1A1A1A 100%);
+    overflow: hidden;
+}
+
+.contacto-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.contacto-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contacto-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4rem;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.contacto-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.title-decoration-contacto {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    margin: 0 auto 2rem;
+    opacity: 0.3;
+    position: relative;
+}
+
+.title-decoration-contacto::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.contacto-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgba(250, 250, 250, 0.7);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== GRID PRINCIPAL ===== */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+/* ===== FORMULARIO ===== */
+.contacto-formulario-wrapper {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.8) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+}
+
+.contacto-form {
+    position: relative;
+}
+
+/* Steps */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeInForm 0.4s ease;
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-step-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.form-step-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.6);
+    margin-bottom: 2rem;
+}
+
+/* Botones de Motivo (Paso 1) */
+.motivo-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.motivo-btn {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.motivo-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.4) 50%, transparent 70%);
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.motivo-btn:hover,
+.motivo-btn.selected {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.motivo-btn:hover::before,
+.motivo-btn.selected::before {
+    opacity: 1;
+}
+
+.motivo-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.motivo-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.motivo-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.6);
+    line-height: 1.4;
+}
+
+/* Grid de Productos */
+.productos-grid-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.producto-checkbox {
+    cursor: pointer;
+}
+
+.producto-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.producto-card-form {
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.producto-checkbox input[type="checkbox"]:checked + .producto-card-form {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+}
+
+.producto-icon-form {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.producto-name-form {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.producto-checkbox input[type="checkbox"]:checked + .producto-card-form .producto-name-form {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Grid de Programación */
+.programacion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.programacion-checkbox {
+    cursor: pointer;
+}
+
+.programacion-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.programacion-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.programacion-checkbox input[type="checkbox"]:checked + .programacion-card {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.programacion-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.programacion-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.programacion-checkbox input[type="checkbox"]:checked + .programacion-card .programacion-name {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Botones de Soporte/Info/Empresa */
+.soporte-buttons,
+.info-buttons,
+.empresa-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.soporte-btn,
+.info-btn,
+.empresa-btn {
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.soporte-btn:hover,
+.info-btn:hover,
+.empresa-btn:hover,
+.soporte-btn.selected,
+.info-btn.selected,
+.empresa-btn.selected {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+}
+
+.soporte-icon,
+.info-icon,
+.empresa-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.soporte-title,
+.info-title,
+.empresa-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.8);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-hint {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(250, 250, 250, 0.5);
+    margin-top: 0.5rem;
+}
+
+.form-counter {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(250, 250, 250, 0.5);
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+/* Teléfono Wrapper */
+.telefono-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.telefono-prefix {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.telefono-wrapper input {
+    flex: 1;
+}
+
+/* Checkboxes */
+.form-checkbox-group {
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--gold);
+}
+
+.checkbox-label span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.checkbox-label a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* Botones de Navegación */
+.btn-volver {
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    transform: translateX(-5px);
+}
+
+.btn-siguiente {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.btn-siguiente:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    background-position: right center;
+}
+
+.btn-enviar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.3rem 2rem;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.btn-enviar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    background-position: right center;
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.btn-enviar:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+.form-security {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(250, 250, 250, 0.5);
+    margin-top: 1rem;
+}
+
+/* ===== COLUMNA DERECHA: WHATSAPP E INFO ===== */
+.contacto-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* WhatsApp Card */
+.whatsapp-card {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.whatsapp-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.whatsapp-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.whatsapp-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.whatsapp-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.whatsapp-qr {
+    margin-bottom: 1.5rem;
+}
+
+.qr-placeholder {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1rem;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.qr-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+.whatsapp-divider {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.5);
+    margin: 1rem 0;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.2rem 2.5rem;
+    background: #25D366;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-arrow {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover .whatsapp-arrow {
+    transform: translateX(5px);
+}
+
+.whatsapp-respuesta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #25D366;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Info Cards */
+.contacto-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.8) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.info-card-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.info-card-content {
+    flex: 1;
+}
+
+.info-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+}
+
+.info-card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.7);
+    line-height: 1.5;
+}
+
+.info-card-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.info-card-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* ===== REDES SOCIALES ===== */
+.redes-sociales-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+    border-radius: 20px;
+}
+
+.redes-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.redes-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.6);
+    margin-bottom: 2.5rem;
+}
+
+.redes-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.red-social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.red-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.instagram {
+    border-color: #E1306C;
+    color: #E1306C;
+}
+
+.instagram:hover {
+    background: #E1306C;
+    color: white;
+}
+
+.facebook {
+    border-color: #1877F2;
+    color: #1877F2;
+}
+
+.facebook:hover {
+    background: #1877F2;
+    color: white;
+}
+
+.tiktok {
+    border-color: #00F2EA;
+    color: #00F2EA;
+}
+
+.tiktok:hover {
+    background: #00F2EA;
+    color: #000;
+}
+
+.linkedin {
+    border-color: #0A66C2;
+    color: #0A66C2;
+}
+
+.linkedin:hover {
+    background: #0A66C2;
+    color: white;
+}
+
+/* ===== FAQ LINK ===== */
+.contacto-faq {
+    text-align: center;
+    padding: 2rem;
+}
+
+.faq-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.faq-text a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.faq-subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.5);
+}

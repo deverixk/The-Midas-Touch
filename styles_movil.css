@@ -1367,3 +1367,497 @@
         font-size: 1.5rem;
     }
 }
+
+/* =====================================================
+   RESPONSIVE MÓVIL - SECCIÓN CONTACTO
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+    
+    .contacto-section {
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    /* ===== HEADER ===== */
+    .contacto-header {
+        margin-bottom: 3rem;
+    }
+
+    .contacto-subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .contacto-title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .title-decoration-contacto {
+        width: 120px;
+        margin-bottom: 1.5rem;
+    }
+
+    .contacto-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* ===== GRID PRINCIPAL ===== */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ===== FORMULARIO ===== */
+    .contacto-formulario-wrapper {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .form-step-title {
+        font-size: 1.5rem;
+    }
+
+    .form-step-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Botones de Motivo - Apilados verticalmente */
+    .motivo-buttons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .motivo-btn {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .motivo-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .motivo-title {
+        font-size: 1.1rem;
+    }
+
+    .motivo-desc {
+        font-size: 0.85rem;
+    }
+
+    /* Grid de Productos - 2 columnas */
+    .productos-grid-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .producto-card-form {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .producto-icon-form {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .producto-name-form {
+        font-size: 0.85rem;
+    }
+
+    /* Grid de Programación - 2 columnas */
+    .programacion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .programacion-card {
+        padding: 1rem 0.75rem;
+    }
+
+    .programacion-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .programacion-name {
+        font-size: 0.85rem;
+    }
+
+    /* Botones de Soporte/Info/Empresa */
+    .soporte-buttons,
+    .info-buttons,
+    .empresa-buttons {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .soporte-btn,
+    .info-btn,
+    .empresa-btn {
+        padding: 1.25rem 1rem;
+    }
+
+    .soporte-icon,
+    .info-icon,
+    .empresa-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .soporte-title,
+    .info-title,
+    .empresa-title {
+        font-size: 0.95rem;
+    }
+
+    /* Form Groups */
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.95rem;
+        border-radius: 6px;
+    }
+
+    .form-hint,
+    .form-counter {
+        font-size: 0.8rem;
+    }
+
+    /* Teléfono Wrapper */
+    .telefono-wrapper {
+        gap: 0.4rem;
+    }
+
+    .telefono-prefix {
+        font-size: 0.95rem;
+    }
+
+    /* Checkboxes */
+    .checkbox-label {
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checkbox-label span {
+        font-size: 0.9rem;
+    }
+
+    /* Botones de Navegación */
+    .btn-volver {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .btn-siguiente {
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.08rem;
+    }
+
+    .btn-enviar {
+        padding: 1.1rem 1.75rem;
+        font-size: 1rem;
+        letter-spacing: 0.12rem;
+        gap: 0.5rem;
+    }
+
+    .btn-arrow {
+        font-size: 1.2rem;
+    }
+
+    .form-security {
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+    }
+
+    /* ===== COLUMNA DERECHA: WHATSAPP E INFO ===== */
+    .contacto-info-wrapper {
+        gap: 1.5rem;
+    }
+
+    /* WhatsApp Card */
+    .whatsapp-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .whatsapp-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .whatsapp-title {
+        font-size: 1.3rem;
+    }
+
+    .whatsapp-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .whatsapp-qr {
+        margin-bottom: 1.25rem;
+    }
+
+    .qr-placeholder {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 0.75rem;
+    }
+
+    .qr-text {
+        font-size: 0.85rem;
+    }
+
+    .whatsapp-divider {
+        font-size: 0.85rem;
+        margin: 0.75rem 0;
+    }
+
+    .whatsapp-btn {
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+        gap: 0.5rem;
+    }
+
+    .whatsapp-respuesta {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+    }
+
+    /* Info Cards */
+    .contacto-info-cards {
+        gap: 1rem;
+    }
+
+    .info-card {
+        padding: 1.25rem;
+        gap: 1rem;
+        border-radius: 12px;
+    }
+
+    .info-card-icon {
+        font-size: 1.75rem;
+    }
+
+    .info-card-title {
+        font-size: 0.95rem;
+    }
+
+    .info-card-text {
+        font-size: 0.85rem;
+    }
+
+    .info-card-btn {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.875rem;
+        margin-top: 0.4rem;
+    }
+
+    /* ===== REDES SOCIALES ===== */
+    .redes-sociales-section {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
+    }
+
+    .redes-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .redes-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .redes-buttons {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .red-social-btn {
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    .red-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* ===== FAQ LINK ===== */
+    .contacto-faq {
+        padding: 1.5rem;
+    }
+
+    .faq-text {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .faq-subtext {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== EXTRA SMALL DEVICES (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+    
+    .contacto-section {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .contacto-title {
+        font-size: 1.75rem;
+    }
+
+    .contacto-description {
+        font-size: 0.95rem;
+    }
+
+    .contacto-formulario-wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-step-title {
+        font-size: 1.3rem;
+    }
+
+    /* Productos y Programación en una sola columna */
+    .productos-grid-form,
+    .programacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Botones más pequeños */
+    .motivo-btn {
+        padding: 1.25rem 1rem;
+    }
+
+    .motivo-icon {
+        font-size: 2.25rem;
+    }
+
+    .motivo-title {
+        font-size: 1rem;
+    }
+
+    .motivo-desc {
+        font-size: 0.8rem;
+    }
+
+    /* WhatsApp */
+    .whatsapp-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .qr-placeholder {
+        width: 130px;
+        height: 130px;
+    }
+
+    .whatsapp-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Redes Sociales */
+    .redes-title {
+        font-size: 1.3rem;
+    }
+
+    .red-social-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== LANDSCAPE MODE (móviles horizontales) ===== */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    
+    .contacto-section {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .contacto-header {
+        margin-bottom: 2rem;
+    }
+
+    .contacto-title {
+        font-size: 1.75rem;
+    }
+
+    .whatsapp-qr {
+        display: none;
+    }
+
+    .motivo-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productos-grid-form,
+    .programacion-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    .contacto-section {
+        padding: 6rem 2.5rem 5rem;
+    }
+
+    .contacto-title {
+        font-size: 2.75rem;
+    }
+
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .productos-grid-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .motivo-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .soporte-buttons,
+    .info-buttons,
+    .empresa-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .redes-buttons {
+        flex-direction: row;
+    }
+}
