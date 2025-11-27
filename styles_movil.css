@@ -1861,3 +1861,318 @@
         flex-direction: row;
     }
 }
+
+/* =====================================================
+   RESPONSIVE MÓVIL - SECCIÓN ACERCA DE
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+    
+    .acerca-section {
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    /* ===== HEADER ===== */
+    .acerca-header {
+        margin-bottom: 3rem;
+    }
+
+    .acerca-subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .acerca-title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .title-decoration-acerca {
+        width: 120px;
+    }
+
+    /* ===== HISTORIA ===== */
+    .acerca-historia {
+        margin-bottom: 3rem;
+    }
+
+    .historia-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .historia-text {
+        padding-right: 0;
+    }
+
+    .historia-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .historia-parrafo {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+
+    .historia-imagen {
+        aspect-ratio: 3/4;
+    }
+
+    /* ===== MISIÓN Y VISIÓN ===== */
+    .mision-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .mv-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .mv-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .mv-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mv-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* ===== VALORES ===== */
+    .valores-section {
+        margin-bottom: 3rem;
+    }
+
+    .valores-header {
+        margin-bottom: 3rem;
+    }
+
+    .valores-title {
+        font-size: 1.8rem;
+    }
+
+    .valores-subtitle {
+        font-size: 1rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .valor-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .valor-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .valor-title {
+        font-size: 1.2rem;
+    }
+
+    .valor-description {
+        font-size: 0.9rem;
+    }
+
+    /* ===== POR QUÉ ELEGIRNOS ===== */
+    .porque-elegirnos-section {
+        margin-bottom: 3rem;
+    }
+
+    .porque-header {
+        margin-bottom: 3rem;
+    }
+
+    .porque-title {
+        font-size: 1.8rem;
+    }
+
+    .porque-subtitle {
+        font-size: 1rem;
+    }
+
+    .porque-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .porque-item {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .porque-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .porque-numero {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .porque-item-title {
+        font-size: 1.2rem;
+    }
+
+    .porque-item-desc {
+        font-size: 0.9rem;
+    }
+
+    /* ===== EQUIPO ===== */
+    .equipo-section {
+        margin-bottom: 3rem;
+    }
+
+    .equipo-header {
+        margin-bottom: 3rem;
+    }
+
+    .equipo-title {
+        font-size: 1.8rem;
+    }
+
+    .equipo-subtitle {
+        font-size: 1rem;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .miembro-card {
+        max-width: 100%;
+    }
+
+    .miembro-info {
+        padding: 1.5rem;
+    }
+
+    .miembro-nombre {
+        font-size: 1.3rem;
+    }
+
+    .miembro-rol {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .miembro-bio {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .acerca-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-description {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 1.1rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== EXTRA SMALL DEVICES (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+    
+    .acerca-section {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .acerca-title {
+        font-size: 1.75rem;
+    }
+
+    .historia-title {
+        font-size: 1.5rem;
+    }
+
+    .historia-parrafo {
+        font-size: 0.95rem;
+    }
+
+    .valores-title,
+    .porque-title,
+    .equipo-title {
+        font-size: 1.5rem;
+    }
+
+    .mv-card,
+    .valor-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .porque-numero {
+        font-size: 2rem;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+    }
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    .acerca-section {
+        padding: 6rem 2.5rem 5rem;
+    }
+
+    .acerca-title {
+        font-size: 2.75rem;
+    }
+
+    .historia-content {
+        gap: 3rem;
+    }
+
+    .historia-title {
+        font-size: 2rem;
+    }
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .porque-grid {
+        grid-template-columns: 1fr;
+    }
+}
