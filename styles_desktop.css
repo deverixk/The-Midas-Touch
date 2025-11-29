@@ -999,9 +999,11 @@ html, body {
     background: linear-gradient(180deg, #0A0A0A 0%, #000000 100%);
     overflow: hidden;
     display: flex;
+    flex-direction: column;   /* ← ESTA ES LA CLAVE */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* para que quede arriba */
 }
+
 
 .productos-container {
     width: 100%;
@@ -1227,6 +1229,67 @@ html, body {
 
 .carousel-3d-btn.next:hover {
     transform: translateX(20px) scale(1.1);
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Sección Productos */
+.productos-header {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 0rem;
+}
+
+.productos-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4rem;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.productos-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.title-decoration-productos {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    margin: 0 auto;
+    opacity: 0.3;
+    position: relative;
+}
+
+.title-decoration-productos::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
 }
 
 /* ===== SEPARADOR ENTRE SECCIONES ===== */
