@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
  // Mapeo de productos a sus páginas
     const productPages = [
         'products_code/llavero-disco.html',    // index 
-        'products_code/tarjeta-nfc.html',      // index 
+        'products_code/tarjeta-nfc-black.html',// index 
         'products_code/llavero-parejas.html',  // index 
         'products_code/card-holder.html',      // index 
         'products_code/proximamente.html'      // index 

@@ -1,6 +1,5 @@
 /* =====================================================
    VISOR 3D ESTÁTICO PARA PRODUCTOS
-   Muestra modelos .glb sin animaciones
    ===================================================== */
 
 class Product3DViewer {
@@ -16,41 +15,43 @@ class Product3DViewer {
     }
     
     init() {
-        // Crear escena
-        this.scene = new THREE.Scene();
-        this.scene.background = null; // Transparente
-        
-        // Configurar cámara
-        const width = this.container.offsetWidth;
-        const height = this.container.offsetHeight;
-        
-        this.camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 2000);
-        this.camera.position.z = 5;
-        
-        // Configurar renderer
-        this.renderer = new THREE.WebGLRenderer({ 
-            antialias: true, 
-            alpha: true // Fondo transparente
-        });
-        this.renderer.setSize(width, height);
-        this.renderer.setPixelRatio(window.devicePixelRatio);
-        
-        // Agregar canvas al contenedor
-        this.container.appendChild(this.renderer.domElement);
-        
-        // Iluminación dorada (igual que el loader)
-        this.setupLighting();
-        
-        
-        // Cargar modelo
-        this.loadModel();
-        
-        // Responsive
-        window.addEventListener('resize', () => this.onResize());
-        
-        // Render loop
-        this.animate();
-    }
+    // Crear escena
+    this.scene = new THREE.Scene();
+    this.scene.background = null;
+    
+    // Configurar cámara
+    const width = this.container.offsetWidth;
+    const height = this.container.offsetHeight;
+    
+    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 2000);
+    this.camera.position.z = 5;
+    
+    // Configurar renderer con optimizaciones móviles
+    const isMobile = window.innerWidth <= 768;
+    
+    this.renderer = new THREE.WebGLRenderer({ 
+        antialias: !isMobile, // Desactivar antialiasing en móvil
+        alpha: true,
+        powerPreference: isMobile ? 'low-power' : 'high-performance'
+    });
+    
+    this.renderer.setSize(width, height);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
+    
+    this.container.appendChild(this.renderer.domElement);
+    
+    // Iluminación
+    this.setupLighting();
+    
+    // Cargar modelo
+    this.loadModel();
+    
+    // Responsive
+    window.addEventListener('resize', () => this.onResize());
+    
+    // Render loop
+    this.animate();
+}
     
     setupLighting() {
     // Luz ambiental más blanca y fuerte (suaviza sombras)

@@ -1,4 +1,4 @@
-/* Panel estrecho dentro del grid */
+
 .config-panel {
     max-width: 420px;
     width: 100%;
@@ -8,7 +8,6 @@
     gap: 1.5rem;
 }
 
-/* Tarjetas compactas del panel */
 .config-group {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(240, 200, 80, 0.3);
@@ -32,7 +31,7 @@
     margin-bottom: 0.6rem;
 }
 
-/* TITULOS — DORADOS, MÁS GRANDES */
+/* TITULOS */
 .group-header span {
     font-family: 'Cinzel', serif;
     color: var(--gold);     
@@ -47,7 +46,7 @@
     margin: 0;
 }
 
-/* ÍTEMS — blancos y fuente normal */
+/* ÍTEMS */
 .group-list li {
     padding: 0.35rem 0;
     color: rgba(250, 250, 250, 0.7);

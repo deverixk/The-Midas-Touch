@@ -27,6 +27,12 @@
         <meta property="og:url" content="https://proximamente.com">
         <meta property="og:type" content="website">
 
+        <!-- Preconnect a recursos externos críticos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
         <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -34,15 +40,46 @@
         <!--Estilos-->
         <link rel="stylesheet" href="styles_desktop.css">
         <link rel="stylesheet" href="styles_movil.css">
+        <!-- CSS completo con preload -->
+        <link rel="preload" href="styles_desktop.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="styles_desktop.css"></noscript>
 
         <style>
-            body {
-                background-color: #000000 !important;
-            }
-    
-            .hero-section {
-                background: #000000 !important;
-            }
+            /* Critical CSS - Above the fold */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #FFE200;
+            --gold-dark: #F3A200;
+            --black: #000000;
+        }
+
+        body {
+            font-family: 'Cinzel Decorative', serif;
+            background-color: var(--black);
+            color: var(--gold);
+            overflow-x: hidden;
+        }
+
+        .loader-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--black);
+            z-index: 10000;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #0A0A0A 0%, #0F0F0F 40%, #1A1A1A 100%);
+        }
         </style>
 
         <!-- PWA Manifest -->
@@ -75,8 +112,8 @@
 
             <!-- Mandalas decorativos -->
             <div class="mandala-container">
-                <img src="assets/images/recursos/Mandala_gris.webp" alt="Mandala" class="mandala mandala-gris">
-                <img src="assets/images/recursos/Mandala_dorado.webp" alt="Mandala" class="mandala mandala-dorado">
+                <img src="assets/images/recursos/Mandala_gris.webp" alt="Mandala" class="mandala mandala-gris" loading="lazy">
+                <img src="assets/images/recursos/Mandala_dorado.webp" alt="Mandala" class="mandala mandala-dorado" loading="lazy">
             </div>
 
             <!-- Contenido principal -->

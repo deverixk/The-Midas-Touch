@@ -114,7 +114,7 @@
     display: block;
 }
 
-/* Móvil: círculo más pequeño y suave */
+/* Móvil */
 .spotlight-reveal {
     -webkit-mask-image: radial-gradient(
         circle 100px at var(--spot-x) var(--spot-y),
@@ -144,7 +144,6 @@
     width: 380px;
     height: 380px;
 
-    /* Gradiente suave que simula luz difusa */
     background: radial-gradient(
         circle,
         rgba(255, 255, 255, 0.09) 0%,
@@ -158,11 +157,9 @@
     transition: opacity 0.45s ease-out;
     filter: blur(20px);
 
-    z-index: 1; /* Debajo del texto y mandalas */
+    z-index: 1;
 }
 
-/* Esto asegura que la imagen de fondo se vea
-   detrás de TODO (incluso mandalas). */
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -170,7 +167,7 @@
 
 @media (max-width: 768px) {
     #scrollButton {
-        bottom: -80px !important; /* o la cantidad que quieras */
+        bottom: -80px !important;
     }
 
     /* ===== HEADER MÓVIL ===== */
@@ -405,7 +402,6 @@
         position: relative;
     }
 
-    /* Iconos de los links */
     .sidebar-icon {
         width: 22px;
         height: 22px;
@@ -427,7 +423,7 @@
         filter: brightness(0) saturate(100%) invert(70%) sepia(60%) saturate(500%) hue-rotate(5deg);
     }
 
-    /* Estado ACTIVO (sección actual) */
+    /* Estado ACTIVO */
     .sidebar-link.active {
         background: rgba(212, 175, 55, 0.15);
         border-left-color: var(--gold);
@@ -441,7 +437,6 @@
         filter: brightness(0) saturate(100%) invert(70%) sepia(60%) saturate(500%) hue-rotate(5deg);
     }
 
-    /* Indicador adicional para sección activa */
     .sidebar-link.active::before {
         content: '';
         position: absolute;
@@ -498,7 +493,6 @@
         bottom: -80px;
     }
 
-    /* Ocultar decoración NFC en móvil */
     .nfc-decoration {
         display: none !important;
     }
@@ -601,32 +595,32 @@
         width: 100%;
         padding: 0;
         text-align: center;
-        margin-bottom: 2rem; /* Separa del stack de productos */
+        margin-bottom: 2rem;
     }
 
     .producto-categoria {
         font-size: 0.7rem;
-        margin-bottom: 0.5rem; /* Reduce espacio */
+        margin-bottom: 0.5rem;
     }
 
     .producto-titulo {
-        font-size: 1.8rem; /* Reduce ligeramente el tamaño */
-        margin-bottom: 0.75rem; /* Reduce espacio */
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
     }
 
     .producto-desc {
-        font-size: 0.9rem; /* Reduce ligeramente el tamaño */
-        margin-bottom: 1rem; /* Reduce espacio */
-        line-height: 1.5; /* Compacta el texto */
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
     }
 
     .producto-precio-wrapper {
         justify-content: center;
-        margin-bottom: 1rem; /* Reduce espacio */
+        margin-bottom: 1rem;
     }
 
     .producto-precio {
-        font-size: 2.2rem; /* Reduce ligeramente el tamaño */
+        font-size: 2.2rem;
     }
 
     .producto-moneda {
@@ -636,14 +630,13 @@
     .producto-cta {
         padding: 0.85rem 1.8rem;
         font-size: 0.85rem;
-        margin-bottom: 1rem; /* Agrega separación inferior */
+        margin-bottom: 1rem;
     }
 
-    /* Stack de productos centrado */
     .productos-stack {
         width: 100%;
         height: 350px;
-        margin: 6rem auto 5rem auto; /* Agrega margen superior para bajar las imágenes */
+        margin: 6rem auto 5rem auto;
     }
 
     .producto-item {
@@ -651,7 +644,6 @@
         height: 280px;
     }
 
-    /* Ajustar posiciones para móvil */
     .producto-item.active {
         transform: translateX(0) translateZ(0) scale(1);
     }
@@ -664,7 +656,6 @@
         transform: translateX(180px) translateZ(-350px) scale(0.4);
     }
 
-    /* Botones centrados abajo */
     .carousel-3d-btn {
         bottom: -1rem;
         width: 50px;
@@ -1048,7 +1039,6 @@
 
 @media screen and (max-width: 768px) {
     
-    /* Item destacado en sidebar */
     .sidebar-sublink-featured {
         background: rgba(212, 175, 55, 0.15);
         border-left: 3px solid var(--gold);
@@ -1060,7 +1050,6 @@
         background: rgba(212, 175, 55, 0.25);
     }
 
-    /* Divisor en submenú */
     .sidebar-submenu-divider {
         height: 1px;
         background: linear-gradient(
@@ -1079,25 +1068,21 @@
 
 @media screen and (max-width: 768px) {
     
-    /* Grid de 2 columnas más compacto */
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem; /* Reduce el espacio entre cards */
-        padding: 0 0.5rem; /* Padding lateral mínimo */
+        gap: 1rem;
+        padding: 0 0.5rem;
     }
     
-    /* Product Card más compacta */
     .product-card {
-        padding: 1rem 0.75rem; /* Reduce padding interno */
+        padding: 1rem 0.75rem;
     }
     
-    /* Imagen del producto más pequeña */
     .product-card-image {
-        height: 180px; /* Reduce de 250px a 180px */
+        height: 180px;
         margin-bottom: 0.75rem;
     }
     
-    /* Badge más pequeño */
     .product-card-badge {
         top: 0.75rem;
         right: 0.75rem;
@@ -1105,17 +1090,15 @@
         padding: 0.3rem 0.75rem;
     }
     
-    /* Textos más compactos */
     .product-card-name {
-        font-size: 1.1rem; /* Reduce de 1.5rem */
+        font-size: 1.1rem;
         margin-bottom: 0.25rem;
     }
     
     .product-card-desc {
-        font-size: 0.8rem; /* Reduce de 0.95rem */
+        font-size: 0.8rem;
         margin-bottom: 0.5rem;
         line-height: 1.3;
-        /* Limitar a 2 líneas para mantener altura uniforme */
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -1123,7 +1106,7 @@
     }
     
     .product-card-price {
-        font-size: 1.3rem; /* Reduce de 1.8rem */
+        font-size: 1.3rem;
         margin-bottom: 0;
     }
     
@@ -1136,7 +1119,7 @@
 @media screen and (max-width: 380px) {
     
     .products-grid {
-        gap: 0.75rem; /* Aún más compacto */
+        gap: 0.75rem;
     }
     
     .product-card {
@@ -1144,7 +1127,7 @@
     }
     
     .product-card-image {
-        height: 150px; /* Más pequeño en pantallas muy chicas */
+        height: 150px;
     }
     
     .product-card-name {
@@ -1448,7 +1431,6 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Botones de Motivo - Apilados verticalmente */
     .motivo-buttons {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -1471,7 +1453,7 @@
         font-size: 0.85rem;
     }
 
-    /* Grid de Productos - 2 columnas */
+    /* Grid de Productos */
     .productos-grid-form {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
@@ -1491,7 +1473,7 @@
         font-size: 0.85rem;
     }
 
-    /* Grid de Programación - 2 columnas */
+    /* Grid de Programación */
     .programacion-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
@@ -1772,13 +1754,11 @@
         font-size: 1.3rem;
     }
 
-    /* Productos y Programación en una sola columna */
     .productos-grid-form,
     .programacion-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Botones más pequeños */
     .motivo-btn {
         padding: 1.25rem 1rem;
     }

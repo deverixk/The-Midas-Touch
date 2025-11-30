@@ -19,6 +19,12 @@
     <meta name="theme-color" content="#FFCD00">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    <!-- Preconnect a recursos externos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
     <!--Fuentes-->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -44,7 +50,7 @@
                     <a href="main.html#inicio" class="nav-link">Inicio</a>
 
                     <div class="nav-dropdown">
-                        <a href="#productos" class="nav-link">
+                        <a href="main.html#productos" class="nav-link">
                             Productos <span class="dropdown-arrow">▼</span>
                         </a>
                     <div class="dropdown-menu">
@@ -79,7 +85,7 @@
                     <a href="carrito.html" class="nav-link">Carrito</a>
                     <a href="main.html#acerca" class="nav-link">Acerca de</a>
                     <a href="perfil.html" class="icon-button">
-                        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
+                        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario" loading="lazy">
                     </a>
                 </nav>
 
@@ -95,77 +101,76 @@
     <!-- Sidebar Móvil -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <img src="assets/images/logos/Minimalist.webp" alt="The Midas Touch" class="sidebar-logo">
-            <button class="sidebar-close" id="sidebarClose">
+            <div class="sidebar-header">
+                <img src="assets/images/logos/Minimalist.webp" alt="The Midas Touch" class="sidebar-logo" loading="lazy">
+                <button class="sidebar-close" id="sidebarClose">
                 <span>×</span>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <div class="sidebar-mandalas">
-            <img src="assets/images/recursos/Mandala_gris.webp" alt="" class="sidebar-mandala sidebar-mandala-gris">
-            <img src="assets/images/recursos/Mandala_dorado.webp" alt="" class="sidebar-mandala sidebar-mandala-dorado">
-        </div>
+            <div class="sidebar-mandalas">
+                <img src="assets/images/recursos/Mandala_gris.webp" alt="" class="sidebar-mandala sidebar-mandala-gris" loading="lazy">
+                <img src="assets/images/recursos/Mandala_dorado.webp" alt="" class="sidebar-mandala sidebar-mandala-dorado" loading="lazy">
+            </div>
 
-        <nav class="sidebar-nav">
-    <a href="main.html#inicio" class="sidebar-link" data-section="inicio">
-        <img src="assets/images/icons/home-icon.webp" alt="" class="sidebar-icon">
-        <span>Inicio</span>
-    </a>
-    
-    <!-- ESTRUCTURA DROPDOWN COMPLETA -->
-    <div class="sidebar-dropdown active">
-        <a href="catalogo.html" class="sidebar-link active" data-section="productos">
-            <img src="assets/images/icons/products-icon.webp" alt="" class="sidebar-icon">
-            <span>Productos</span>
-            <span class="sidebar-arrow">▼</span>
+    <nav class="sidebar-nav">
+        <a href="main.html#inicio" class="sidebar-link" data-section="inicio">
+            <img src="assets/images/icons/home-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+            <span>Inicio</span>
         </a>
-        <div class="sidebar-submenu">
-            <a href="catalogo.html" class="sidebar-sublink sidebar-sublink-featured">
-                <span class="sublink-icon"></span>
-                <span>Catálogo Completo</span>
-            </a>
-            <div class="sidebar-submenu-divider"></div>
-            <a href="catalogo.html#premium" class="sidebar-sublink">
-                <span class="sublink-icon"></span>
-                <span>Premium</span>
-            </a>
-            <a href="catalogo.html#smart" class="sidebar-sublink">
-                <span class="sublink-icon"></span>
-                <span>Smart</span>
-            </a>
-            <a href="catalogo.html#gift" class="sidebar-sublink">
-                <span class="sublink-icon"></span>
-                <span>Gift</span>
-            </a>
-            <a href="catalogo.html#business" class="sidebar-sublink">
-                <span class="sublink-icon"></span>
-                <span>Business</span>
-            </a>
-        </div>
-    </div>
     
-    <a href="main.html#como-funciona" class="sidebar-link" data-section="como-funciona">
-        <img src="assets/images/icons/info-icon.webp" alt="" class="sidebar-icon">
-        <span>Cómo funciona</span>
-    </a>
-    <a href="main.html#contacto" class="sidebar-link" data-section="contacto">
-        <img src="assets/images/icons/contact-icon.webp" alt="" class="sidebar-icon">
-        <span>Contacto</span>
-    </a>
-    <a href="carrito.html" class="sidebar-link" data-section="carrito">
-        <img src="assets/images/icons/cart-icon.webp" alt="" class="sidebar-icon">
-        <span>Carrito</span>
-    </a>
-    <a href="main.html#acerca" class="sidebar-link" data-section="acerca">
-        <img src="assets/images/icons/about-icon.webp" alt="" class="sidebar-icon">
-        <span>Acerca de</span>
-    </a>
-    <a href="perfil.html" class="sidebar-icon-button">
-        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
-        <span class="hidden-text">Mi cuenta</span>
-    </a>
-</nav>
+            <!-- ESTRUCTURA DROPDOWN COMPLETA -->
+            <div class="sidebar-dropdown active">
+                <a href="catalogo.html" class="sidebar-link active" data-section="productos">
+                    <img src="assets/images/icons/products-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+                    <span>Productos</span>
+                    <span class="sidebar-arrow">▼</span>
+                </a>
+            <div class="sidebar-submenu">
+                <a href="catalogo.html" class="sidebar-sublink sidebar-sublink-featured">
+                    <span class="sublink-icon"></span>
+                    <span>Catálogo Completo</span>
+                </a>
+            <div class="sidebar-submenu-divider"></div>
+                    <a href="catalogo.html#premium" class="sidebar-sublink">
+                        <span class="sublink-icon"></span>
+                        <span>Premium</span>
+                    </a>
+                    <a href="catalogo.html#smart" class="sidebar-sublink">
+                        <span class="sublink-icon"></span>
+                        <span>Smart</span>
+                    </a>
+                    <a href="catalogo.html#gift" class="sidebar-sublink">
+                        <span class="sublink-icon"></span>
+                        <span>Gift</span>
+                    </a>
+                    <a href="catalogo.html#business" class="sidebar-sublink">
+                        <span class="sublink-icon"></span>
+                        <span>Business</span>
+                    </a>
+            </div>
+            </div>
+                <a href="main.html#como-funciona" class="sidebar-link" data-section="como-funciona">
+                    <img src="assets/images/icons/info-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+                    <span>Cómo funciona</span>
+                </a>
+                <a href="main.html#contacto" class="sidebar-link" data-section="contacto">
+                    <img src="assets/images/icons/contact-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+                    <span>Contacto</span>
+                </a>
+                <a href="carrito.html" class="sidebar-link" data-section="carrito">
+                    <img src="assets/images/icons/cart-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+                    <span>Carrito</span>
+                </a>
+                <a href="main.html#acerca" class="sidebar-link" data-section="acerca">
+                    <img src="assets/images/icons/about-icon.webp" alt="" class="sidebar-icon" loading="lazy">
+                    <span>Acerca de</span>
+                </a>
+                <a href="perfil.html" class="sidebar-icon-button">
+                    <img src="assets/images/icons/goldenprofile.webp" alt="Usuario" loading="lazy">
+                    <span class="hidden-text">Mi cuenta</span>
+                    </a>
+    </nav>
     </aside>
 
     <!-- Hero del Catálogo -->
@@ -197,27 +202,25 @@
                 <!-- Producto 1: Tarjeta NFC Negra -->
                 <a href="products_code/tarjeta-nfc-black.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-card-black.webp" alt="Tarjeta NFC">
+                        <img src="assets/images/productos/placeholder-card-black.webp" alt="Tarjeta NFC" loading="lazy">
                     </div>
                     <div class="product-card-badge">PREMIUM</div>
-                    <h3 class="product-card-name">Tarjeta NFC (Negra)</h3>
-                    <p class="product-card-desc">Contacto profesional premium</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Tarjeta NFC (Negra)</h3>
+                        <p class="product-card-desc">Contacto profesional premium</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
 
                 <!-- Producto 2: Tarjeta NFC Blanca -->
                 <a href="products_code/tarjeta-nfc-white.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-card.webp" alt="Tarjeta NFC">
+                        <img src="assets/images/productos/placeholder-card.webp" alt="Tarjeta NFC" loading="lazy">
                     </div>
                     <div class="product-card-badge">PREMIUM</div>
-                    <h3 class="product-card-name">Tarjeta NFC (Blanca)</h3>
-                    <p class="product-card-desc">Contacto profesional premium</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Tarjeta NFC (Blanca)</h3>
+                        <p class="product-card-desc">Contacto profesional premium</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
-
                 <!-- Más productos  -->
-
             </div>
         </div>
     </section>
@@ -238,25 +241,24 @@
                 <!-- Producto: Tag NFC -->
                 <a href="products_code/tag-nfc-blanco.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-tag.webp" alt="Tag NFC">
+                        <img src="assets/images/productos/placeholder-tag.webp" alt="Tag NFC" loading="lazy">
                     </div>
                     <div class="product-card-badge">SMART</div>
-                    <h3 class="product-card-name">Tag NFC Adhesivo (Blanco)</h3>
-                    <p class="product-card-desc">Etiqueta ultradelgada universal</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Tag NFC Adhesivo (Blanco)</h3>
+                        <p class="product-card-desc">Etiqueta ultradelgada universal</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
 
                  <!-- Producto: Tag NFC Negra -->
                 <a href="products_code/tag-nfc-negro.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-tag-black.webp" alt="Tag NFC">
+                        <img src="assets/images/productos/placeholder-tag-black.webp" alt="Tag NFC" loading="lazy">
                     </div>
                     <div class="product-card-badge">SMART</div>
-                    <h3 class="product-card-name">Tag NFC Adhesivo (Negro)</h3>
-                    <p class="product-card-desc">Etiqueta ultradelgada universal</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Tag NFC Adhesivo (Negro)</h3>
+                        <p class="product-card-desc">Etiqueta ultradelgada universal</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
-
             </div>
         </div>
     </section>
@@ -277,25 +279,24 @@
                 <!-- Producto 3: Llavero Disco -->
                 <a href="products_code/llavero-disco.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-disco.webp" alt="Llavero Disco">
+                        <img src="assets/images/productos/placeholder-disco.webp" alt="Llavero Disco" loading="lazy">
                     </div>
                     <div class="product-card-badge">GIFT</div>
-                    <h3 class="product-card-name">Llavero de Música</h3>
-                    <p class="product-card-desc">Tu canción favorita en un toque</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Llavero de Música</h3>
+                        <p class="product-card-desc">Tu canción favorita en un toque</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
 
                 <!-- Producto 4: Llavero Parejas -->
                 <a href="products_code/llavero-parejas.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-parejas.webp" alt="Llavero Parejas">
+                        <img src="assets/images/productos/placeholder-parejas.webp" alt="Llavero Parejas" loading="lazy">
                     </div>
                     <div class="product-card-badge">GIFT</div>
-                    <h3 class="product-card-name">Llavero de Parejas</h3>
-                    <p class="product-card-desc">Recuerdos especiales compartidos</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Llavero de Parejas</h3>
+                        <p class="product-card-desc">Recuerdos especiales compartidos</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
-
             </div>
         </div>
     </section>
@@ -316,14 +317,13 @@
                 <!-- Producto 5: Card Holder -->
                 <a href="products_code/card-holder.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-holder.webp" alt="Card Holder">
+                        <img src="assets/images/productos/placeholder-holder.webp" alt="Card Holder" loading="lazy">
                     </div>
                     <div class="product-card-badge">BUSINESS</div>
-                    <h3 class="product-card-name">Menu Holder</h3>
-                    <p class="product-card-desc">Menú digital para tu negocio</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Menu Holder</h3>
+                        <p class="product-card-desc">Menú digital para tu negocio</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
-
             </div>
         </div>
     </section>
@@ -344,14 +344,13 @@
                 <!-- Producto 6: Entradas NFC -->
                 <a href="products_code/entradas-nfc.html" class="product-card">
                     <div class="product-card-image">
-                        <img src="assets/images/productos/placeholder-entradas.webp" alt="Entradas NFC">
+                        <img src="assets/images/productos/placeholder-entradas.webp" alt="Entradas NFC" loading="lazy">
                     </div>
                     <div class="product-card-badge">EVENT</div>
-                    <h3 class="product-card-name">Entradas NFC</h3>
-                    <p class="product-card-desc">Tickets digitales inteligentes</p>
-                    <p class="product-card-price">$PRECIO <span>MXN</span></p>
+                        <h3 class="product-card-name">Entradas NFC</h3>
+                        <p class="product-card-desc">Tickets digitales inteligentes</p>
+                        <p class="product-card-price">$PRECIO <span>MXN</span></p>
                 </a>
-
             </div>
         </div>
     </section>
@@ -364,12 +363,12 @@
         <div class="catalog-container">
             <div class="packages-header">
                 <p class="packages-subtitle">Ofertas Especiales</p>
-                <h2 class="packages-title">Paquetes "Barras de Oro"</h2>
+                    <h2 class="packages-title">Paquetes "Barras de Oro"</h2>
                 <div class="title-decoration-catalog"></div>
-                <p class="packages-description">
+                    <p class="packages-description">
                     Ahorra con nuestros paquetes diseñados para diferentes necesidades. 
                     Más productos, mejor precio.
-                </p>
+                    </p>
             </div>
 
             <div class="packages-grid">
@@ -377,16 +376,16 @@
                 <!-- Paquete 1: -->
                 <div class="package-card">
                     <div class="package-icon"></div>
-                    <h3 class="package-name">Paquete ¿?</h3>
-                    <p class="package-description">Perfecto para...</p>
+                        <h3 class="package-name">Paquete <br>"Moneda de Oro"<br></h3>
+                        <p class="package-description">Perfecto para negocios.</p>
                     
                     <div class="package-includes">
                         <p class="includes-title">Incluye:</p>
                         <ul class="includes-list">
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
+                            <li>10 Menú Holder</li>
+                            <li>Menú personalizado</li>
+                            <li>2 Tarjetas NFC</li>
+                            <li>Soporte de 1 año</li>
                         </ul>
                     </div>
                     
@@ -402,16 +401,17 @@
                 <div class="package-card package-featured">
                     <div class="package-badge">MÁS POPULAR</div>
                     <div class="package-icon"></div>
-                    <h3 class="package-name">Paquete ¿?</h3>
-                    <p class="package-description">Perfecto para...</p>
+                        <h3 class="package-name">Paquete <br>"Lingote Dorado"<br></h3>
+                        <p class="package-description">Perfecto para comprar en conjunto con tus colegas o conocidos.</p>
                     
                     <div class="package-includes">
                         <p class="includes-title">Incluye:</p>
                         <ul class="includes-list">
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
+                            <li>5 Llaveros de Música</li>
+                            <li>5 Tarjetas NFC</li>
+                            <li>5 NFC Tags</li>
+                            <li>Programación personalizada para cada producto.</li>
+                            <li>Soporte de 1 año</li>
                         </ul>
                     </div>
                     
@@ -426,16 +426,16 @@
                 <!-- Paquete 3: Eventos -->
                 <div class="package-card">
                     <div class="package-icon"></div>
-                    <h3 class="package-name">Paquete ¿?</h3>
-                    <p class="package-description">Perfecto para...</p>
+                        <h3 class="package-name">Paquete <br>"Joya de Oro"<br></h3>
+                    <p class="package-description">Perfecto para esos regalos con el doble de detalle.</p>
                     
                     <div class="package-includes">
                         <p class="includes-title">Incluye:</p>
                         <ul class="includes-list">
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
+                            <li>2 Llaveros de Pareja</li>
+                            <li>2 Llaveros de Musica</li>
+                            <li>Página web con algún detalle.</li>
+                            <li>Soporte de 1 año</li>
                         </ul>
                     </div>
                     
@@ -452,7 +452,7 @@
             <!-- CTA de paquetes personalizados -->
             <div class="custom-package-cta">
                 <p class="custom-package-text">¿Necesitas algo diferente?</p>
-                <a href="#contacto" class="custom-package-button">Crear Paquete Personalizado</a>
+                <a href="main.html#contacto" class="custom-package-button">Crear Paquete Personalizado</a>
             </div>
 
         </div>

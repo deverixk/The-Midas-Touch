@@ -27,9 +27,16 @@
         <meta property="og:url" content="https://proximamente.com">
         <meta property="og:type" content="website">
 
+        <!-- Preconnect a recursos externos críticos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
         <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
         <!--Estilos-->
         <link rel="stylesheet" href="styles_desktop.css">
@@ -51,7 +58,7 @@
                 <span class="header-title">The Midas Touch</span>
                 </a>
 
-                <!-- Navegación Desktop -->
+                <!-- Botones Header -->
                 <nav class="header-nav desktop-nav">
                     <a href="#inicio" class="nav-link">Inicio</a>
 
@@ -59,31 +66,32 @@
                         <a href="#productos" class="nav-link">
                             Productos <span class="dropdown-arrow">▼</span>
                         </a>
-                    <div class="dropdown-menu">
-                        <a href="catalogo.html" class="dropdown-item dropdown-item-featured">
-                            <span class="dropdown-icon"></span>
-                            <span>Ver Catálogo Completo</span>
-                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="catalogo.html" class="dropdown-item dropdown-item-featured">
+                                <span class="dropdown-icon"></span>
+                                <span>Ver Catálogo Completo</span>
+                            </a>
 
                         <div class="dropdown-divider"></div>
 
-                        <a href="catalogo.html#premium" class="dropdown-item">
-                            <span class="dropdown-icon"></span>
-                            <span>Premium</span>
-                        </a>
-                        <a href="catalogo.html#smart" class="dropdown-item">
-                            <span class="dropdown-icon"></span>
-                            <span>Smart</span>
-                        </a>
-                        <a href="catalogo.html#gift" class="dropdown-item">
-                            <span class="dropdown-icon"></span>
-                            <span>Gift</span>
-                        </a>
-                        <a href="catalogo.html#business" class="dropdown-item">
-                            <span class="dropdown-icon"></span>
-                            <span>Business</span>
-                        </a>
-                    </div>
+                            <a href="catalogo.html#premium" class="dropdown-item">
+                                <span class="dropdown-icon"></span>
+                                <span>Premium</span>
+                            </a>
+                            <a href="catalogo.html#smart" class="dropdown-item">
+                                <span class="dropdown-icon"></span>
+                                <span>Smart</span>
+                            </a>
+                            <a href="catalogo.html#gift" class="dropdown-item">
+                                <span class="dropdown-icon"></span>
+                                <span>Gift</span>
+                            </a>
+                            <a href="catalogo.html#business" class="dropdown-item">
+                                <span class="dropdown-icon"></span>
+                                <span>Business</span>
+                            </a>
+                        </div>
                     </div>
 
                     <a href="#como-funciona" class="nav-link">Cómo funciona</a>
@@ -91,8 +99,8 @@
                     <a href="carrito.html" class="nav-link">Carrito</a>
                     <a href="#acerca" class="nav-link">Acerca de</a>
                     <a href="perfil.html" class="icon-button">
-                        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
-                    </a>
+                        <img src="assets/images/icons/goldenprofile.webp" alt="Usuario" loading="lazy">
+                        </a>
                 </nav>
 
                 <!-- Botón Hamburguesa (Móvil) -->
@@ -117,65 +125,65 @@
 
             <!-- Mandalas de fondo -->
             <div class="sidebar-mandalas">
-                <img src="assets/images/recursos/Mandala_gris.webp" alt="" class="sidebar-mandala sidebar-mandala-gris">
-                <img src="assets/images/recursos/Mandala_dorado.webp" alt="" class="sidebar-mandala sidebar-mandala-dorado">
+                <img src="assets/images/recursos/Mandala_gris.webp" alt="" class="sidebar-mandala sidebar-mandala-gris" loading="lazy">
+                <img src="assets/images/recursos/Mandala_dorado.webp" alt="" class="sidebar-mandala sidebar-mandala-dorado" loading="lazy">
             </div>
 
             <nav class="sidebar-nav">
                 <a href="#inicio" class="sidebar-link" data-section="inicio">
-                <img src="assets/images/icons/home-icon.webp" alt="" class="sidebar-icon">
+                <img src="assets/images/icons/home-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                 <span>Inicio</span>
                 </a>
         
                 <div class="sidebar-dropdown">
                     <a href="catalogo.html" class="sidebar-link" data-section="productos">
-                        <img src="assets/images/icons/products-icon.webp" alt="" class="sidebar-icon">
+                        <img src="assets/images/icons/products-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                         <span>Productos</span>
                         <span class="sidebar-arrow">▼</span>
                     </a>
-                <div class="sidebar-submenu">
-                    <a href="catalogo.html" class="sidebar-sublink sidebar-sublink-featured">
-                        <span class="sublink-icon">📦</span>
-                        <span>Catálogo Completo</span>
-                    </a>
-                        <div class="sidebar-submenu-divider"></div>
-                    <a href="catalogo.html#premium" class="sidebar-sublink">
-                        <span class="sublink-icon"></span>
-                        <span>Premium</span>
-                    </a>
-                    <a href="catalogo.html#smart" class="sidebar-sublink">
-                        <span class="sublink-icon"></span>
-                        <span>Smart</span>
-                    </a>
-                    <a href="catalogo.html#gift" class="sidebar-sublink">
-                        <span class="sublink-icon"></span>
-                        <span>Gift</span>
-                    </a>
-                    <a href="catalogo.html#business" class="sidebar-sublink">
-                        <span class="sublink-icon"></span>
-                        <span>Business</span>
+                    <div class="sidebar-submenu">
+                        <a href="catalogo.html" class="sidebar-sublink sidebar-sublink-featured">
+                            <span class="sublink-icon">📦</span>
+                            <span>Catálogo Completo</span>
+                        </a>
+                    <div class="sidebar-submenu-divider"></div>
+                        <a href="catalogo.html#premium" class="sidebar-sublink">
+                            <span class="sublink-icon"></span>
+                            <span>Premium</span>
+                        </a>
+                        <a href="catalogo.html#smart" class="sidebar-sublink">
+                            <span class="sublink-icon"></span>
+                            <span>Smart</span>
+                        </a>
+                        <a href="catalogo.html#gift" class="sidebar-sublink">
+                            <span class="sublink-icon"></span>
+                            <span>Gift</span>
+                        </a>
+                        <a href="catalogo.html#business" class="sidebar-sublink">
+                            <span class="sublink-icon"></span>
+                            <span>Business</span>
                         </a>
                     </div>
                 </div>
 
                 <a href="#como-funciona" class="sidebar-link" data-section="como-funciona">
-                    <img src="assets/images/icons/info-icon.webp" alt="" class="sidebar-icon">
+                    <img src="assets/images/icons/info-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                     <span>Cómo funciona</span>
                 </a>
                 <a href="#contacto" class="sidebar-link" data-section="contacto">
-                    <img src="assets/images/icons/contact-icon.webp" alt="" class="sidebar-icon">
+                    <img src="assets/images/icons/contact-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                     <span>Contacto</span>
                 </a>
                 <a href="carrito.html" class="sidebar-link" data-section="carrito">
-                    <img src="assets/images/icons/cart-icon.webp" alt="" class="sidebar-icon">
+                    <img src="assets/images/icons/cart-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                     <span>Carrito</span>
                 </a>
                 <a href="#acerca" class="sidebar-link" data-section="acerca">
-                <img src="assets/images/icons/about-icon.webp" alt="" class="sidebar-icon">
+                <img src="assets/images/icons/about-icon.webp" alt="" class="sidebar-icon" loading="lazy">
                     <span>Acerca de</span>
                 </a>
                 <a href="perfil.html" class="sidebar-icon-button">
-                    <img src="assets/images/icons/goldenprofile.webp" alt="Usuario">
+                    <img src="assets/images/icons/goldenprofile.webp" alt="Usuario" loading="lazy">
                     <span class="hidden-text">Mi cuenta</span>
                 </a>
 
@@ -229,7 +237,7 @@
 
                     <!-- Card HERO -->
                     <div class="card-hero" data-magnetic>
-                        <img src="assets/images/icons/lightning-icon.webp" alt="Instantáneo" class="card-icon">
+                        <img src="assets/images/icons/lightning-icon.webp" alt="Instantáneo" class="card-icon" loading="lazy">
                         <h3 class="card-title">Instantáneo</h3>
                         <p class="card-description">
                             Un simple toque y listo. No necesitas descargar apps ni escanear códigos QR. 
@@ -239,7 +247,7 @@
 
                     <!-- Card Pequeña 1 (Universal) -->
                     <div class="card-small card-small-1" data-magnetic>
-                        <img src="assets/images/icons/globe-icon.webp" alt="Universal" class="card-icon-small">
+                        <img src="assets/images/icons/globe-icon.webp" alt="Universal" class="card-icon-small" loading="lazy">
                         <h3 class="card-title-small">Universal</h3>
                         <p class="card-description-small">
                             Compatible con iPhone y Android. Funciona en todos los dispositivos modernos.
@@ -248,7 +256,7 @@
 
                     <!-- Card Pequeña 2 (Personalizable) -->
                     <div class="card-small card-small-2" data-magnetic>
-                        <img src="assets/images/icons/sparkle-icon.webp" alt="Personalizable" class="card-icon-small">
+                        <img src="assets/images/icons/sparkle-icon.webp" alt="Personalizable" class="card-icon-small" loading="lazy">
                         <h3 class="card-title-small">Personalizable</h3>
                         <p class="card-description-small">
                             Yo programo tu NFC exactamente como lo necesitas. Tú decides qué hace.
@@ -272,12 +280,11 @@
 
          <!-- Sección Productos -->
         <section class="productos-section" id="productos">
-            <!-- Header -->
                 <div class="productos-header">
                     <p class="productos-subtitle">Nuestra Colección</p>
                     <h2 class="productos-title">Productos Destacados</h2>
-                <div class="title-decoration-productos"></div>
-            </div>
+                    <div class="title-decoration-productos"></div>
+                </div>
             <div class="productos-container">
                 
                 <!-- Carousel 3D -->
@@ -292,7 +299,7 @@
                             <span class="producto-precio" id="productoPrecio">$0</span>
                             <span class="producto-moneda">MXN</span>
                         </div>
-                        <button class="producto-cta" id="productoCTA">Ver detalles →</button>
+                            <button class="producto-cta" id="productoCTA">Ver detalles →</button>
                     </div>
 
                     <div class="productos-stack">
@@ -300,18 +307,18 @@
                         <div class="producto-item" data-index="0" data-3d-model="assets/models/prod/llavero-music.glb">
                             <img src="assets/images/productos/tag-nfc.png" alt="Llavero Disco NFC">
                         </div>
-                        <div class="producto-item active" data-index="1" data-3d-model="assets/models/CardNew_op.glb">
+                        <div class="producto-item active" data-index="1" data-3d-model="assets/models/CardNew_op.glb" loading="lazy">
                             <img src="assets/images/productos/tag-nfc.png" alt="Tarjeta NFC">
                         </div>
-                        <div class="producto-item" data-index="2" data-3d-model="assets/models/prod/Llavero Corazon.glb">
+                        <div class="producto-item" data-index="2" data-3d-model="assets/models/prod/Llavero Corazon.glb" loading="lazy">
                             <img src="assets/images/productos/tag-nfc.png" alt="Llavero Parejas NFC">
                         </div>
-                        <div class="producto-item" data-index="3" data-3d-model="assets/models/CardHolder_op.glb">
+                        <div class="producto-item" data-index="3" data-3d-model="assets/models/CardHolder_op.glb" loading="lazy">
                             <img src="assets/images/productos/tag-nfc.png" alt="Card Holder NFC">
                         </div>
                         <!-- Producto con IMAGEN normal -->
                         <div class="producto-item" data-index="4">
-                             <img src="assets/images/productos/ejemplo.webp" alt="Próximamente">
+                             <img src="assets/images/productos/ejemplo.webp" alt="Próximamente" loading="lazy">
                         </div>
                     </div>
 
@@ -324,7 +331,6 @@
                     </button>
 
                 </div>
-
             </div>
         </section>
 
@@ -332,381 +338,380 @@
         <div class="section-separator"></div>
 
         <!-- =====================================================
-            SECCIÓN CÓMO FUNCIONA - COMPLETA
+            SECCIÓN CÓMO FUNCIONA
          ===================================================== -->
         <section class="como-funciona-section" id="como-funciona">
             <div class="como-funciona-container">
-        
-            <!-- ========== 1. HEADER + DESCRIPCIÓN ========== -->
-            <div class="como-funciona-header">
-                <p class="como-funciona-subtitle">El Proceso</p>
-                <h2 class="como-funciona-title">Cómo Funciona</h2>
-            <div class="title-decoration-como-funciona"></div>
-                <p class="como-funciona-description">
-                    Descubre la simplicidad detrás de la tecnología NFC. 
-                    En solo tres pasos, transforma la forma en que compartes información.
-                </p>
-            </div>
 
-            <!-- ========== 2. VIDEO PRINCIPAL CON OVERLAY ========== -->
-            <div class="video-showcase">
-                <div class="video-wrapper">
-                    <!-- Thumbnail con Play Button -->
-                <div class="video-thumbnail" id="videoThumbnail">
-                    <img src="assets/images/video/video-thumbnail.jpg" alt="Demostración NFC" loading="lazy">
-                    <button class="play-button" id="playButton" aria-label="Reproducir video">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </button>
-                <div class="video-duration">2:30</div>
-            </div>
+                <div class="como-funciona-header">
+                    <p class="como-funciona-subtitle">El Proceso</p>
+                    <h2 class="como-funciona-title">Cómo Funciona</h2>
+                <div class="title-decoration-como-funciona"></div>
+                    <p class="como-funciona-description">
+                        Descubre la simplicidad detrás de la tecnología NFC. 
+                        En solo tres pasos, transforma la forma en que compartes información.
+                    </p>
+                </div>
+
+                <!-- ========== 2. VIDEO PRINCIPAL CON OVERLAY ========== -->
+                <div class="video-showcase">
+                    <div class="video-wrapper">
+                        <!-- Thumbnail con Play Button -->
+                        <div class="video-thumbnail" id="videoThumbnail">
+                            <img src="assets/images/video/video-thumbnail.jpg" alt="Demostración NFC" loading="lazy">
+                            <button class="play-button" id="playButton" aria-label="Reproducir video">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <div class="video-duration">2:30</div>
+                        </div>
                 
-                <!-- Video Real (oculto inicialmente) -->
-                <video id="nfcDemoVideo" controls controlsList="nodownload" preload="metadata">
-                    <source src="assets/videos/nfc-demo.mp4" type="video/mp4">
-                    <source src="assets/videos/nfc-demo.webm" type="video/webm">
-                    Tu navegador no soporta video HTML5.
-                </video>
-            </div>
+                        <!-- Video Real (oculto inicialmente) -->
+                        <video id="nfcDemoVideo" controls controlsList="nodownload" preload="metadata">
+                            <source src="assets/videos/nfc-demo.mp4" type="video/mp4">
+                            <source src="assets/videos/nfc-demo.webm" type="video/webm">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                    </div>
             
-            <!-- Caption del video -->
-                <p class="video-caption">
-                Mira cómo un simple toque puede compartir tu información al instante
-                </p>
-            </div>
+                        <!-- Caption del video -->
+                        <p class="video-caption">
+                        Mira cómo un simple toque puede compartir tu información al instante
+                        </p>
+                </div>
 
-            <!-- Separador interno -->
-            <div class="section-separator-interno"></div>
+                <!-- Separador interno -->
+                <div class="section-separator-interno"></div>
 
-            <!-- ========== 3. TIMELINE DE 3 PASOS ========== -->
-            <div class="steps-section">
+                <!-- ========== 3. TIMELINE DE 3 PASOS ========== -->
+                <div class="steps-section">
                 <div class="steps-header">
                     <h3 class="steps-title">Tres Pasos Simples</h3>
                     <p class="steps-subtitle">Del pedido a la magia en tu bolsillo</p>
                 </div>
 
-            <div class="steps-timeline">
+                <div class="steps-timeline">
                 
-                <!-- Paso 1 -->
-                <div class="step-item" data-step="1">
-                    <div class="step-number-wrapper">
-                        <div class="step-number">1</div>
-                        <div class="step-connector"></div>
-                    </div>
-                    <div class="step-content-wrapper">
-                        <div class="step-text">
-                            <h3 class="step-title">Elige tu Producto</h3>
-                            <p class="step-description">
-                                Selecciona entre nuestra colección premium de tarjetas, 
-                                tags, llaveros o holders NFC según tus necesidades. 
-                                Cada producto está diseñado con precisión y materiales de alta calidad.
-                            </p>
+                    <!-- Paso 1 -->
+                    <div class="step-item" data-step="1">
+                        <div class="step-number-wrapper">
+                            <div class="step-number">1</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content-wrapper">
+                            <div class="step-text">
+                                <h3 class="step-title">Elige tu Producto</h3>
+                                <p class="step-description">
+                                    Selecciona entre nuestra colección premium de tarjetas, 
+                                    tags, llaveros o holders NFC según tus necesidades. 
+                                    Cada producto está diseñado con precisión y materiales de alta calidad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <img src="assets/images/steps/step-1-select.webp" alt="Seleccionar producto" loading="lazy">
                         </div>
                     </div>
-                    <div class="step-visual">
-                        <img src="assets/images/steps/step-1-select.webp" alt="Seleccionar producto" loading="lazy">
-                    </div>
-                </div>
 
-                <!-- Paso 2 -->
-                <div class="step-item" data-step="2">
-                    <div class="step-number-wrapper">
-                        <div class="step-number">2</div>
-                        <div class="step-connector"></div>
-                    </div>
-                    <div class="step-content-wrapper">
-                        <div class="step-text">
-                            <h3 class="step-title">Configura tu NFC</h3>
-                            <p class="step-description">
-                                Dinos qué quieres que haga: compartir contacto, redes sociales, 
-                                URL personalizada, WiFi, menú digital o cualquier acción que imagines. 
-                                Yo me encargo de programarlo exactamente como lo necesitas.
-                            </p>
+                    <!-- Paso 2 -->
+                    <div class="step-item" data-step="2">
+                        <div class="step-number-wrapper">
+                            <div class="step-number">2</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content-wrapper">
+                            <div class="step-text">
+                                <h3 class="step-title">Configura tu NFC</h3>
+                                <p class="step-description">
+                                    Dinos qué quieres que haga: compartir contacto, redes sociales, 
+                                    URL personalizada, WiFi, menú digital o cualquier acción que imagines. 
+                                    Yo me encargo de programarlo exactamente como lo necesitas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <img src="assets/images/steps/step-2-configure.webp" alt="Configurar NFC" loading="lazy">
                         </div>
                     </div>
-                    <div class="step-visual">
-                        <img src="assets/images/steps/step-2-configure.webp" alt="Configurar NFC" loading="lazy">
-                    </div>
-                </div>
 
-                <!-- Paso 3 -->
-                <div class="step-item" data-step="3">
-                    <div class="step-number-wrapper">
-                        <div class="step-number">3</div>
-                    </div>
-                    <div class="step-content-wrapper">
-                        <div class="step-text">
-                            <h3 class="step-title">¡Listo para Usar!</h3>
-                            <p class="step-description">
-                                Recibe tu producto programado y listo. Solo acércalo a cualquier 
-                                smartphone moderno y la magia sucede instantáneamente. 
-                                Sin apps, sin complicaciones, sin esperas.
-                            </p>
+                    <!-- Paso 3 -->
+                    <div class="step-item" data-step="3">
+                        <div class="step-number-wrapper">
+                            <div class="step-number">3</div>
+                        </div>
+                        <div class="step-content-wrapper">
+                            <div class="step-text">
+                                <h3 class="step-title">¡Listo para Usar!</h3>
+                                <p class="step-description">
+                                    Recibe tu producto programado y listo. Solo acércalo a cualquier 
+                                    smartphone moderno y la magia sucede instantáneamente. 
+                                    Sin apps, sin complicaciones, sin esperas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <img src="assets/images/steps/step-3-ready.webp" alt="Producto listo" loading="lazy">
                         </div>
                     </div>
-                    <div class="step-visual">
-                        <img src="assets/images/steps/step-3-ready.webp" alt="Producto listo" loading="lazy">
-                    </div>
-                </div>
 
                 <!-- Línea decorativa vertical -->
                     <div class="timeline-line"></div>
                 </div>
-            </div>
-
-            <!-- Separador interno -->
-            <div class="section-separator-interno"></div>
-
-            <!-- ========== 4. GRID DE FEATURES ========== -->
-            <div class="features-section">
-            <div class="features-header">
-                <h3 class="features-title">¿Por Qué NFC?</h3>
-                <p class="features-subtitle">Ventajas que marcan la diferencia</p>
-            </div>
-
-            <div class="features-grid">
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/images/icons/cf-icons/reprogramable.webp" alt="Reprogramable">
-                    </div>
-                    <h4 class="feature-title">Reprogramable</h4>
-                    <p class="feature-description">
-                        Cambia el contenido cuando quieras sin necesidad de un nuevo producto. 
-                        Actualiza información fácilmente.
-                    </p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/images/icons/cf-icons/universal.webp" alt="Universal">
+                <!-- Separador interno -->
+                <div class="section-separator-interno"></div>
+
+                <!-- ========== 4. GRID DE FEATURES ========== -->
+                <div class="features-section">
+                    <div class="features-header">
+                        <h3 class="features-title">¿Por Qué NFC?</h3>
+                        <p class="features-subtitle">Ventajas que marcan la diferencia</p>
                     </div>
-                    <h4 class="feature-title">Universal</h4>
-                    <p class="feature-description">
-                        Compatible con iPhone (iOS 13+) y todos los dispositivos Android modernos. 
-                        Funciona en el 97% de smartphones.
-                    </p>
+
+                    <div class="features-grid">
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/cf-icons/reprogramable.webp" alt="Reprogramable" loading="lazy">
+                            </div>
+                            <h4 class="feature-title">Reprogramable</h4>
+                            <p class="feature-description">
+                                Cambia el contenido cuando quieras sin necesidad de un nuevo producto. 
+                                Actualiza información fácilmente.
+                            </p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/cf-icons/universal.webp" alt="Universal" loading="lazy">
+                            </div>
+                            <h4 class="feature-title">Universal</h4>
+                            <p class="feature-description">
+                                Compatible con iPhone (iOS 13+) y todos los dispositivos Android modernos. 
+                                Funciona en el 97% de smartphones.
+                            </p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/cf-icons/seguro.webp" alt="Seguro" loading="lazy">
+                            </div>
+                            <h4 class="feature-title">Seguro</h4>
+                            <p class="feature-description">
+                                Sin baterías, sin conexión a internet requerida. 
+                                Tu información siempre protegida y bajo tu control.
+                            </p>
+                        </div>
+
+                        <div class="feature-card feature-wide">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/cf-icons/infinitas.webp" alt="Infinitas Posibilidades" loading="lazy">
+                            </div>
+                            <h4 class="feature-title">Infinitas Posibilidades</h4>
+                            <p class="feature-description">
+                                Contacto, redes sociales, WiFi, ubicación, menús digitales, música, 
+                                videos, presentaciones y mucho más. Si lo imaginas, lo programamos.
+                            </p>
+                        </div>
+
+                        <div class="feature-card feature-wide">
+                            <div class="feature-icon">
+                                <img src="assets/images/icons/cf-icons/ecofriendly.webp" alt="Eco-Friendly" loading="lazy">
+                            </div>
+                            <h4 class="feature-title">Eco-Friendly</h4>
+                            <p class="feature-description">
+                                Reduce el uso de papel. Una sola tarjeta NFC reemplaza cientos de tarjetas tradicionales.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/images/icons/cf-icons/seguro.webp" alt="Seguro">
-                    </div>
-                    <h4 class="feature-title">Seguro</h4>
-                    <p class="feature-description">
-                        Sin baterías, sin conexión a internet requerida. 
-                        Tu información siempre protegida y bajo tu control.
-                    </p>
-                </div>
+                    <!-- Separador interno -->
+                    <div class="section-separator-interno"></div>
 
-                <div class="feature-card feature-wide">
-                    <div class="feature-icon">
-                        <img src="assets/images/icons/cf-icons/infinitas.webp" alt="Infinitas Posibilidades">
-                    </div>
-                    <h4 class="feature-title">Infinitas Posibilidades</h4>
-                    <p class="feature-description">
-                        Contacto, redes sociales, WiFi, ubicación, menús digitales, música, 
-                        videos, presentaciones y mucho más. Si lo imaginas, lo programamos.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/images/icons/cf-icons/ecofriendly.webp" alt="Eco-Friendly">
-                    </div>
-                    <h4 class="feature-title">Eco-Friendly</h4>
-                    <p class="feature-description">
-                        Reduce el uso de papel. Una sola tarjeta NFC reemplaza cientos de tarjetas tradicionales.
-                    </p>
-                </div>
-
-            </div>
-            </div>
-
-            <!-- Separador interno -->
-            <div class="section-separator-interno"></div>
-
-            <!-- ========== 5. COMPARACIÓN ANTES/DESPUÉS ========== -->
-            <div class="comparison-section">
+                <!-- ========== 5. COMPARACIÓN ANTES/DESPUÉS ========== -->
+                <div class="comparison-section">
             
-            <div class="comparison-header">
-                <h3 class="comparison-title">La Diferencia es Clara</h3>
-                <p class="comparison-subtitle">Método tradicional vs Tecnología NFC</p>
-            </div>
+                        <div class="comparison-header">
+                            <h3 class="comparison-title">La Diferencia es Clara</h3>
+                            <p class="comparison-subtitle">Método tradicional vs Tecnología NFC</p>
+                        </div>
 
-            <div class="comparison-grid">
+                    <div class="comparison-grid">
                 
-                <!-- Columna ANTES -->
-                <div class="comparison-column comparison-before">
-                    <div class="comparison-badge badge-traditional">Método Tradicional</div>
-                    <ul class="comparison-list">
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Tarjetas de papel que se pierden o dañan</span>
-                        </li>
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Escanear códigos QR manualmente</span>
-                        </li>
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Escribir URLs largas y complicadas</span>
-                        </li>
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Descargar apps adicionales</span>
-                        </li>
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Información desactualizada e imposible de cambiar</span>
-                        </li>
-                        <li class="comparison-item negative">
-                            <span class="comparison-icon">❌</span>
-                            <span class="comparison-text">Impresiones costosas cada vez que cambias datos</span>
-                        </li>
-                    </ul>
+                        <!-- Columna ANTES -->
+                        <div class="comparison-column comparison-before">
+                            <div class="comparison-badge badge-traditional">Método Tradicional</div>
+                        <ul class="comparison-list">
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Tarjetas de papel que se pierden o dañan</span>
+                            </li>
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Escanear códigos QR manualmente</span>
+                            </li>
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Escribir URLs largas y complicadas</span>
+                            </li>
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Descargar apps adicionales</span>
+                            </li>
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Información desactualizada e imposible de cambiar</span>
+                            </li>
+                            <li class="comparison-item negative">
+                                <span class="comparison-icon">❌</span>
+                                <span class="comparison-text">Impresiones costosas cada vez que cambias datos</span>
+                            </li>
+                        </ul>
+                        </div>
+
+                        <!-- Columna DESPUÉS -->
+                        <div class="comparison-column comparison-after">
+                            <div class="comparison-badge badge-nfc">Con The Midas Touch</div>
+                        <ul class="comparison-list">
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Producto premium duradero y elegante</span>
+                            </li>
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Un simple toque y listo</span>
+                            </li>
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Conexión instantánea automática</span>
+                            </li>
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Sin apps, funciona de forma nativa</span>
+                            </li>
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Actualizable cuando quieras</span>
+                            </li>
+                            <li class="comparison-item positive">
+                                <span class="comparison-icon">✓</span>
+                                <span class="comparison-text">Inversión única que dura años</span>
+                            </li>
+                        </ul>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- Columna DESPUÉS -->
-                <div class="comparison-column comparison-after">
-                    <div class="comparison-badge badge-nfc">Con The Midas Touch</div>
-                    <ul class="comparison-list">
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Producto premium duradero y elegante</span>
-                        </li>
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Un simple toque y listo</span>
-                        </li>
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Conexión instantánea automática</span>
-                        </li>
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Sin apps, funciona de forma nativa</span>
-                        </li>
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Actualizable cuando quieras</span>
-                        </li>
-                        <li class="comparison-item positive">
-                            <span class="comparison-icon">✓</span>
-                            <span class="comparison-text">Inversión única que dura años</span>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Separador interno -->
+                <div class="section-separator-interno"></div>
 
-            </div>
-            </div>
-
-            <!-- Separador interno -->
-            <div class="section-separator-interno"></div>
-
-            <!-- ========== 6. FAQ ACCORDION ========== -->
-            <div class="faq-section">
-            <div class="faq-header">
-                <h3 class="faq-title">Preguntas Frecuentes</h3>
-                <p class="faq-subtitle">Todo lo que necesitas saber sobre NFC</p>
-            </div>
+                <!-- ========== 6. FAQ ACCORDION ========== -->
+                <div class="faq-section">
+                    <div class="faq-header">
+                        <h3 class="faq-title">Preguntas Frecuentes</h3>
+                        <p class="faq-subtitle">Todo lo que necesitas saber sobre NFC</p>
+                    </div>
             
-            <div class="faq-list">
+                    <div class="faq-list">
                 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Necesito una app especial para usar NFC?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No necesitas ninguna app. Los dispositivos iPhone (iOS 13 o superior) y Android modernos 
-                           tienen lector NFC integrado de forma nativa. Solo acerca tu teléfono y funciona automáticamente. 
-                           Es como la magia, pero es tecnología.</p>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Necesito una app especial para usar NFC?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                            <p>No necesitas ninguna app. Los dispositivos iPhone (iOS 13 o superior) y Android modernos 
+                                tienen lector NFC integrado de forma nativa. Solo acerca tu teléfono y funciona automáticamente. 
+                                Es como la magia, pero es tecnología.</p>
+                        </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Funciona sin internet?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                            <p>El chip NFC funciona sin necesidad de internet para hacer la lectura. Sin embargo, 
+                                si programas una URL o contenido que está en línea (como redes sociales, sitio web o menú digital), 
+                                necesitarás conexión para visualizar ese contenido. Para contactos vCard, funciona totalmente offline.</p>
+                        </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Puedo cambiar la información programada?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                            <p>Sí, absolutamente. Contáctame y reprogramo tu producto con la nueva información que necesites. 
+                                La mayoría de nuestros chips también permiten reprogramación directa usando apps especializadas 
+                                como NFC Tools (disponible gratis en App Store y Google Play).</p>
+                        </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Qué distancia tiene el NFC?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                            <p>El rango de lectura NFC es de aproximadamente 3-4 centímetros. Es una tecnología de proximidad 
+                                diseñada específicamente para ser segura y funcionar solo cuando acercas intencionalmente el dispositivo. 
+                                Esto evita lecturas accidentales o no autorizadas.</p>
+                        </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Los productos NFC necesitan batería?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                                <p>No, los chips NFC son completamente pasivos y no requieren batería ni carga. 
+                                Funcionan mediante inducción electromagnética: el teléfono genera un campo magnético que alimenta 
+                                temporalmente el chip durante la lectura. Por eso duran indefinidamente sin mantenimiento.</p>
+                        </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="faq-question-text">¿Qué puedo programar en mi NFC?</span>
+                                <span class="faq-arrow">▼</span>
+                            </button>
+                        <div class="faq-answer">
+                            <p>Las posibilidades son prácticamente infinitas: Contacto vCard completo, enlaces a redes sociales, 
+                                sitio web o portfolio, menú digital para restaurantes, conexión WiFi automática, ubicación GPS, 
+                                enlaces a música o videos, documentos PDF, presentaciones, y cualquier URL personalizada. 
+                                Si tienes una idea específica, consúltame y lo hacemos realidad.</p>
+                        </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Funciona sin internet?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>El chip NFC funciona sin necesidad de internet para hacer la lectura. Sin embargo, 
-                           si programas una URL o contenido que está en línea (como redes sociales, sitio web o menú digital), 
-                           necesitarás conexión para visualizar ese contenido. Para contactos vCard, funciona totalmente offline.</p>
+                <!-- Separador interno -->
+                <div class="section-separator-interno"></div>
+
+                <!-- ========== 7. CTA FINAL ========== -->
+                <div class="como-funciona-cta">
+                    <div class="cta-content">
+                        <h3 class="cta-title">¿Listo para transformar la forma en que conectas?</h3>
+                        <p class="cta-description">
+                            Descubre nuestra colección completa de productos NFC premium. 
+                            El futuro de compartir información está a un toque de distancia.
+                        </p>
+                        <a href="catalogo.html" class="cta-button-final">
+                            <span>Explorar Catálogo</span>
+                            <span class="cta-arrow">→</span>
+                        </a>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Puedo cambiar la información programada?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí, absolutamente. Contáctame y reprogramo tu producto con la nueva información que necesites. 
-                           La mayoría de nuestros chips también permiten reprogramación directa usando apps especializadas 
-                           como NFC Tools (disponible gratis en App Store y Google Play).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Qué distancia tiene el NFC?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>El rango de lectura NFC es de aproximadamente 3-4 centímetros. Es una tecnología de proximidad 
-                           diseñada específicamente para ser segura y funcionar solo cuando acercas intencionalmente el dispositivo. 
-                           Esto evita lecturas accidentales o no autorizadas.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Los productos NFC necesitan batería?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No, los chips NFC son completamente pasivos y no requieren batería ni carga. 
-                           Funcionan mediante inducción electromagnética: el teléfono genera un campo magnético que alimenta 
-                           temporalmente el chip durante la lectura. Por eso duran indefinidamente sin mantenimiento.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span class="faq-question-text">¿Qué puedo programar en mi NFC?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Las posibilidades son prácticamente infinitas: Contacto vCard completo, enlaces a redes sociales, 
-                           sitio web o portfolio, menú digital para restaurantes, conexión WiFi automática, ubicación GPS, 
-                           enlaces a música o videos, documentos PDF, presentaciones, y cualquier URL personalizada. 
-                           Si tienes una idea específica, consúltame y lo hacemos realidad.</p>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-
-            <!-- Separador interno -->
-            <div class="section-separator-interno"></div>
-
-            <!-- ========== 7. CTA FINAL ========== -->
-            <div class="como-funciona-cta">
-            <div class="cta-content">
-                <h3 class="cta-title">¿Listo para transformar la forma en que conectas?</h3>
-                <p class="cta-description">
-                    Descubre nuestra colección completa de productos NFC premium. 
-                    El futuro de compartir información está a un toque de distancia.
-                </p>
-                <a href="catalogo.html" class="cta-button-final">
-                    <span>Explorar Catálogo</span>
-                    <span class="cta-arrow">→</span>
-                </a>
-            </div>
-            </div>
 
             </div>
         </section>
@@ -721,17 +726,17 @@
             <div class="contacto-container">
         
                 <!-- Header -->
-            <div class="contacto-header">
-                <p class="contacto-subtitle">Hablemos</p>
-                <h2 class="contacto-title">Múltiples Formas de Conectar</h2>
-            <div class="title-decoration-contacto"></div>
-                <p class="contacto-description">
-                Elige tu método preferido de contacto. Estamos aquí para ayudarte 
-                con tu proyecto NFC.
-                </p>
-            </div>
+                <div class="contacto-header">
+                    <p class="contacto-subtitle">Hablemos</p>
+                    <h2 class="contacto-title">Múltiples Formas de Conectar</h2>
+                <div class="title-decoration-contacto"></div>
+                    <p class="contacto-description">
+                    Elige tu método preferido de contacto. Estamos aquí para ayudarte 
+                    con tu proyecto NFC.
+                    </p>
+                </div>
 
-            <!-- Grid Principal -->
+                <!-- Grid Principal -->
             <div class="contacto-grid">
             
             <!-- ========== COLUMNA IZQUIERDA: FORMULARIO ========== -->
@@ -1109,7 +1114,7 @@
                 </form>
 
             </div>
-
+            
             <!-- ========== COLUMNA DERECHA: WHATSAPP Y CONTACTO ========== -->
             <div class="contacto-info-wrapper">
                 
@@ -1123,7 +1128,7 @@
                     <div class="whatsapp-qr">
                         <!-- Aquí puedes poner un QR code generado -->
                         <div class="qr-placeholder">
-                            <img src="assets/images/contacto/qr-whatsapp.webp" alt="QR WhatsApp" loading="lazy">
+                            <img src="assets/images/contacto/qr-whatsapp.webp" alt="QR WhatsApp" loading="lazy" loading="lazy">
                         </div>
                         <p class="qr-text">Escanea para chatear</p>
                     </div>
@@ -1220,9 +1225,9 @@
             <!-- Separador -->
             <div class="section-separator"></div>
 
-            <!-- =====================================================
-            SECCIÓN ACERCA DE - THE MIDAS TOUCH
-            ===================================================== -->
+        <!-- =====================================================
+        SECCIÓN ACERCA DE - THE MIDAS TOUCH
+        ===================================================== -->
         <section class="acerca-section" id="acerca">
             <div class="acerca-container">
         
@@ -1445,27 +1450,58 @@
             </div>
         </section>
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js', { scope: '/' })
-      .then(reg => console.log('SW registrado en:', reg.scope))
-      .catch(err => console.error('Error registrando SW:', err));
-  });
-}
-</script>
+        <!-- Lazy Loading Automático para imágenes -->
+        <script>
+        (function() {
+            // Agregar loading="lazy" a todas las imágenes excepto las críticas
+            const criticalImages = [
+            '.header-logo img',
+            '.nfc-logo img',
+            '.sidebar-logo'
+        ];
 
-    <!--Scripts-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-        <script src="sidebar.js"></script>
-        <script src="animations.js"></script>
-        <script src="inicio-magnetic.js"></script>
-        <script src="productos-carousel.js"></script>
-        <script src="product-3d-viewer.js"></script>
-        <script src="sw.js"></script>
-        <script src="videoloader.js"></script>
-        <script src="contacto-form.js"></script>
+        const allImages = document.querySelectorAll('img');
+  
+        allImages.forEach(img => {
+        // Verificar si NO es imagen crítica
+        const isCritical = criticalImages.some(selector => {
+        return img.matches(selector) || img.closest(selector);
+        });
+
+        if (!isCritical && !img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+        }
+        });
+        })();
+        </script>
+
+        <!--Scripts - Optimizados-->
+
+    <!-- Three.js: Crítico para modelos 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script defer src="lazy-3d-loader.js"></script>
+
+    <!-- Scripts críticos-->
+    <script defer src="animations.js"></script>
+    <script defer src="sidebar.js"></script>
+
+    <!-- Scripts específicos de sección -->
+    <script defer src="inicio-magnetic.js"></script>
+    <script defer src="productos-carousel.js"></script>
+    <script defer src="product-3d-viewer.js"></script>
+    <script defer src="videoloader.js"></script>
+    <script defer src="contacto-form.js"></script>
+
+    <!-- Service Worker: Async (no bloquea nada) -->
+    <script>
+    if ('serviceWorker' in navigator) {
+     window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('✅ SW registrado:', reg.scope))
+        .catch(err => console.error('❌ Error SW:', err));
+     });
+    }
+    </script>
     </body>
 </html>

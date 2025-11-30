@@ -215,8 +215,8 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 0; /* Detrás de todo */
-    pointer-events: none; /* No afecta al usuario */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .spotlight-img {
@@ -226,7 +226,7 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0); /* Empieza negro */
+    filter: brightness(0);
     transition: filter 0.3s ease-out;
 }
 
@@ -234,9 +234,8 @@ html, body {
     display: none;
 }
 
-/* Spotlight suave: reemplaza clip-path por mask-image para tener edge feather */
 .spotlight-reveal {
-    filter: none !important; /* deja la imagen sin oscuridad */
+    filter: none !important;
     -webkit-mask-image: radial-gradient(
         circle 200px at var(--spot-x) var(--spot-y),
         rgba(255,255,255,1) 0%,
@@ -308,7 +307,7 @@ html, body {
   );
   background-size: 250%;
   background-position: left;
-  color: #000000; /* texto blanco */
+  color: #000000;
   position: relative;
   display: flex;
   align-items: center;
@@ -316,15 +315,15 @@ html, body {
   cursor: pointer;
   transition: all 0.8s ease;
   overflow: hidden;
-  opacity: 0; /* animación de aparición */
+  opacity: 0;
   transform: translateY(10px);
   margin-top: 4rem;
   font-family: inherit;
   font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
-  z-index: 1; /* el texto por encima del fondo */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* resalta texto */
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .midas-button.visible {
@@ -338,7 +337,6 @@ html, body {
   }
 }
 
-/* Pseudo-elemento solo para overlay de animación, sin oscurecer */
 .midas-button::before {
   content: "";
   position: absolute;
@@ -347,13 +345,13 @@ html, body {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: transparent; /* sin oscurecer */
+  background: transparent;
   transition: all 1s ease;
   z-index: 0;
 }
 
 .midas-button:hover {
-  background-position: right; /* anima gradiente */
+  background-position: right;
   transform: scale(1.05);
 }
 
@@ -361,7 +359,7 @@ html, body {
   transform: scale(0.95);
 }
 
-/* ===== SECCIÓN INICIO - GRID MODERNO ===== */
+/* ===== SECCIÓN INICIO ===== */
 .inicio-section {
     position: relative;
     min-height: 100vh;
@@ -370,7 +368,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Mandala decorativo sutil */
 /* ===== DECORACIÓN NFC: TELÉFONO CON ONDAS ===== */
 .nfc-decoration {
     position: absolute;
@@ -382,7 +379,6 @@ html, body {
     z-index: 1;
 }
 
-/* Ondas NFC expandiéndose */
 .nfc-wave {
     position: absolute;
     bottom: 80px;
@@ -427,7 +423,6 @@ html, body {
     }
 }
 
-/* Teléfono */
 .nfc-phone {
     position: absolute;
     bottom: 0;
@@ -455,7 +450,6 @@ html, body {
     }
 }
 
-/* Pantalla del teléfono */
 .phone-screen {
     width: 100%;
     height: 100%;
@@ -492,7 +486,6 @@ html, body {
     }
 }
 
-/* Notch del teléfono */
 .phone-notch {
     position: absolute;
     top: 0;
@@ -504,7 +497,6 @@ html, body {
     border-radius: 0 0 16px 16px;
 }
 
-/* Icono NFC en pantalla */
 .nfc-icon {
     width: 60px;
     height: 60px;
@@ -558,7 +550,7 @@ html, body {
     align-items: start;
 }
 
-/* ===== TÍTULO GRANDE (Izquierda) ===== */
+/* ===== TÍTULO GRANDE ===== */
 .inicio-title-block {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -1024,7 +1016,7 @@ html, body {
     padding: 0 3rem;
 }
 
-/* ===== DETALLES DEL PRODUCTO (IZQUIERDA) ===== */
+/* ===== DETALLES DEL PRODUCTO ===== */
 .producto-detalles {
     flex: 0 0 400px;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
@@ -1162,7 +1154,7 @@ html, body {
     z-index: 10;
 }
 
-/* Producto 1 (Primera posición a la derecha) */
+/* Producto 1 */
 .producto-item.next-1 {
     transform: translateX(200px) translateZ(-300px) scale(0.7);
     opacity: 0.6;
@@ -1170,7 +1162,7 @@ html, body {
     z-index: 5;
 }
 
-/* Producto 2 (Segunda posición a la derecha) */
+/* Producto 2 */
 .producto-item.next-2 {
     transform: translateX(320px) translateZ(-500px) scale(0.5);
     opacity: 0.3;
@@ -1178,7 +1170,7 @@ html, body {
     z-index: 1;
 }
 
-/* Productos ocultos (fuera de vista) */
+/* Productos ocultos */
 .producto-item.hidden {
     transform: translateX(400px) translateZ(-700px) scale(0.3);
     opacity: 0;
@@ -1243,7 +1235,7 @@ html, body {
     }
 }
 
-/* Header Sección Productos */
+/* HTML DE PRODUCTOS */
 .productos-header {
     text-align: center;
     padding-top: 3rem;
@@ -1324,7 +1316,7 @@ html, body {
 
 
 /* =====================================================
-   PÁGINAS DE PRODUCTO - MUSEUM GALLERY STYLE
+   PÁGINAS DE PRODUCTO - HTML DE PRODUCTOS
    ===================================================== */
 
 /* Header de producto */
@@ -1348,14 +1340,14 @@ html, body {
 }
 
 .product-header-left {
-    flex: 1; /* 👈 Ocupa espacio igual a la derecha */
+    flex: 1;
     display: flex;
     align-items: center;
 }
 
 /* Logo centrado */
 .product-header-logo {
-    position: absolute; /* 👈 Posición absoluta para centrar */
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -1367,10 +1359,10 @@ html, body {
 
 /* Lado derecho */
 .product-header-right {
-    flex: 1; /* 👈 Ocupa espacio igual a la izquierda */
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* 👈 Alinea a la derecha */
+    justify-content: flex-end;
 }
 
 .header-section-label {
@@ -1564,7 +1556,7 @@ html, body {
     border-radius: 50%;
 }
 
-/* Grid de 2 columnas para características y configuración */
+/* CONFIG Y CARAC */
 .product-details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1750,7 +1742,7 @@ html, body {
 .related-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* o cover, dependiendo de cómo quieres que se vea */
+    object-fit: contain;
 }
 
 .related-title {
@@ -2885,242 +2877,282 @@ line-height: 1.6;
 
 /* ===== 5. COMPARISON SECTION ===== */
 .comparison-section {
-margin-bottom: 6rem;
+    margin-bottom: 6rem;
 }
+
 .comparison-header {
-text-align: center;
-margin-bottom: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
+
 .comparison-title {
-font-family: 'Cinzel', serif;
-font-size: 2.5rem;
-color: var(--gold);
-margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
 }
+
 .comparison-subtitle {
-font-family: 'Inter', sans-serif;
-font-size: 1.1rem;
-color: rgba(250, 250, 250, 0.6);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(250, 250, 250, 0.6);
 }
+
 .comparison-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3rem;
-max-width: 1100px;
-margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 .comparison-column {
-background: linear-gradient(135deg, rgba(26, 26, 26, 0.4) 0%, rgba(15, 15, 15, 0.6) 100%);
-border: 1px solid rgba(212, 175, 55, 0.2);
-border-radius: 16px;
-padding: 2.5rem 2rem;
-position: relative;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.4) 0%, rgba(15, 15, 15, 0.6) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    position: relative;
 }
+
 .comparison-badge {
-position: absolute;
-top: -15px;
-left: 50%;
-transform: translateX(-50%);
-padding: 0.5rem 1.5rem;
-border-radius: 20px;
-font-family: 'Inter', sans-serif;
-font-size: 0.85rem;
-font-weight: 600;
-letter-spacing: 0.1rem;
-text-transform: uppercase;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
+
 .badge-traditional {
-background: rgba(150, 150, 150, 0.3);
-color: rgba(250, 250, 250, 0.6);
-border: 1px solid rgba(150, 150, 150, 0.3);
+    background: rgba(150, 150, 150, 0.3);
+    color: rgba(250, 250, 250, 0.6);
+    border: 1px solid rgba(150, 150, 150, 0.3);
 }
+
 .badge-nfc {
-background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-color: var(--black);
-box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--black);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
 }
+
 .comparison-list {
-list-style: none;
-padding: 0;
-margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
 }
+
 .comparison-item {
-display: flex;
-align-items: flex-start;
-gap: 1rem;
-margin-bottom: 1.5rem;
-font-family: 'Inter', sans-serif;
-font-size: 1rem;
-line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
 }
+
 .comparison-icon {
-font-size: 1.2rem;
-flex-shrink: 0;
-margin-top: 0.1rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
 }
+
 .negative .comparison-icon {
-color: #FF6B6B;
+    color: #FF6B6B;
 }
+
 .positive .comparison-icon {
-color: var(--gold);
+    color: var(--gold);
 }
+
 .negative .comparison-text {
-color: rgba(250, 250, 250, 0.5);
+    color: rgba(250, 250, 250, 0.5);
 }
+
 .positive .comparison-text {
-color: rgba(250, 250, 250, 0.8);
+    color: rgba(250, 250, 250, 0.8);
 }
+
 /* ===== 6. FAQ ACCORDION ===== */
 .faq-section {
-margin-bottom: 6rem;
+    margin-bottom: 6rem;
 }
+
 .faq-header {
-text-align: center;
-margin-bottom: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
+
 .faq-title {
-font-family: 'Cinzel', serif;
-font-size: 2.5rem;
-color: var(--gold);
-margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
 }
+
 .faq-subtitle {
-font-family: 'Inter', sans-serif;
-font-size: 1.1rem;
-color: rgba(250, 250, 250, 0.6);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(250, 250, 250, 0.6);
 }
+
 .faq-list {
-max-width: 900px;
-margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
+
 .faq-item {
-background: linear-gradient(135deg, rgba(26, 26, 26, 0.4) 0%, rgba(15, 15, 15, 0.6) 100%);
-border: 1px solid rgba(212, 175, 55, 0.2);
-border-radius: 12px;
-margin-bottom: 1.5rem;
-overflow: hidden;
-transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.4) 0%, rgba(15, 15, 15, 0.6) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+
 .faq-item:hover {
-border-color: var(--gold);
+    border-color: var(--gold);
 }
+
 .faq-question {
-width: 100%;
-background: transparent;
-border: none;
-padding: 1.5rem 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-cursor: pointer;
-transition: all 0.3s ease;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 .faq-question-text {
-font-family: 'Cinzel', serif;
-font-size: 1.1rem;
-color: var(--gold);
-text-align: left;
-flex: 1;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    text-align: left;
+    flex: 1;
 }
+
 .faq-arrow {
-font-size: 0.8rem;
-color: var(--gold);
-transition: transform 0.3s ease;
-margin-left: 1rem;
+    font-size: 0.8rem;
+    color: var(--gold);
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
 }
+
 .faq-item.active .faq-arrow {
-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
+
 .faq-answer {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease, padding 0.4s ease;
-padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 2rem;
 }
+
 .faq-item.active .faq-answer {
-max-height: 500px;
-padding: 0 2rem 1.5rem 2rem;
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
 }
+
 .faq-answer p {
-font-family: 'Inter', sans-serif;
-font-size: 1rem;
-color: rgba(250, 250, 250, 0.7);
-line-height: 1.7;
-margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.7);
+    line-height: 1.7;
+    margin: 0;
 }
+
 /* ===== 7. CTA FINAL ===== */
 .como-funciona-cta {
-text-align: center;
-padding: 4rem 2rem;
-background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%);
-border-radius: 20px;
-border: 1px solid rgba(212, 175, 55, 0.3);
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
+
 .cta-content {
-max-width: 700px;
-margin: 0 auto;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 .cta-title {
-font-family: 'Cinzel', serif;
-font-size: 2.2rem;
-color: var(--gold);
-margin-bottom: 1.5rem;
-line-height: 1.3;
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
 }
+
 .cta-description {
-font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-font-size: 1.1rem;
-color: rgba(250, 250, 250, 0.7);
-margin-bottom: 2.5rem;
-line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(250, 250, 250, 0.7);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
 }
+
 .cta-button-final {
-display: inline-flex;
-align-items: center;
-gap: 0.75rem;
-padding: 1.3rem 3.5rem;
-background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-background-size: 200% 200%;
-color: var(--black);
-text-decoration: none;
-font-family: 'Cinzel', serif;
-font-weight: 600;
-font-size: 1.1rem;
-border-radius: 50px;
-transition: all 0.4s ease;
-text-transform: uppercase;
-letter-spacing: 0.15rem;
-box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-position: relative;
-overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.3rem 3.5rem;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    background-size: 200% 200%;
+    color: var(--black);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
 }
+
 .cta-button-final::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-transition: left 0.5s ease;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
 }
+
 .cta-button-final:hover::before {
-left: 100%;
+    left: 100%;
 }
+
 .cta-button-final:hover {
-transform: translateY(-5px);
-box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
-background-position: right center;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    background-position: right center;
 }
+
 .cta-button-final:active {
-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
+
 .cta-arrow {
-transition: transform 0.3s ease;
-font-size: 1.3rem;
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
 }
+
 .cta-button-final:hover .cta-arrow {
-transform: translateX(5px);
+    transform: translateX(5px);
 }
 
 /* =====================================================
