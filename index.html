@@ -35,51 +35,21 @@
 
         <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
         <!--Estilos-->
         <link rel="stylesheet" href="styles_desktop.css">
         <link rel="stylesheet" href="styles_movil.css">
-        <!-- CSS completo con preload -->
-        <link rel="preload" href="styles_desktop.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="styles_desktop.css"></noscript>
 
         <style>
-            /* Critical CSS - Above the fold */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --gold: #D4AF37;
-            --gold-light: #FFE200;
-            --gold-dark: #F3A200;
-            --black: #000000;
-        }
-
-        body {
-            font-family: 'Cinzel Decorative', serif;
-            background-color: var(--black);
-            color: var(--gold);
-            overflow-x: hidden;
-        }
-
-        .loader-3d {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: var(--black);
-            z-index: 10000;
-        }
-
-        .hero-section {
-            min-height: 100vh;
-            background: linear-gradient(180deg, #0A0A0A 0%, #0F0F0F 40%, #1A1A1A 100%);
-        }
+            body {
+                background-color: #000000 !important;
+            }
+    
+            .hero-section {
+                background: #000000 !important;
+            }
         </style>
 
         <!-- PWA Manifest -->
