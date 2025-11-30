@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+
+    .config-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .config-group {
+        padding: 0.9rem 1rem;
+    }
+
+    .group-header img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .group-list li {
+        font-size: 0.95rem;
+    }
+}

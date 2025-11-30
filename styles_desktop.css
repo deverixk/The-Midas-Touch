@@ -293,8 +293,8 @@ html, body {
 
     /* Golden Button Estilo Midas */
 .midas-button {
-  width: 110px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   border: none;
   border-radius: 10px;
   background: linear-gradient(
@@ -320,7 +320,7 @@ html, body {
   transform: translateY(10px);
   margin-top: 4rem;
   font-family: inherit;
-  font-size: 0.72em;
+  font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
   z-index: 1; /* el texto por encima del fondo */
@@ -996,12 +996,12 @@ html, body {
     position: relative;
     min-height: 100vh;
     padding: 0;
-    background: linear-gradient(180deg, #0A0A0A 0%, #000000 100%);
+    background: linear-gradient(180deg, #0A0A0A 0%, #141414 100%);
     overflow: hidden;
     display: flex;
-    flex-direction: column;   /* ← ESTA ES LA CLAVE */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* para que quede arriba */
+    justify-content: flex-start;
 }
 
 
@@ -1027,6 +1027,7 @@ html, body {
 /* ===== DETALLES DEL PRODUCTO (IZQUIERDA) ===== */
 .producto-detalles {
     flex: 0 0 400px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     padding-right: 3rem;
     z-index: 100;
 }
@@ -1526,7 +1527,7 @@ html, body {
 
 /* Descripción */
 .product-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 1.8;
@@ -1618,7 +1619,7 @@ html, body {
 }
 
 .features-list li {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 300;
     color: rgba(250, 250, 250, 0.7);
@@ -1672,6 +1673,7 @@ html, body {
     cursor: pointer;
     flex: 1;
 }
+
 
 /* Sección de precio y CTA */
 .price-cta-section {
@@ -1743,6 +1745,12 @@ html, body {
     margin-top: 5rem;
     padding-top: 3rem;
     border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.related-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* o cover, dependiendo de cómo quieres que se vea */
 }
 
 .related-title {
@@ -1833,15 +1841,15 @@ html, body {
 }
 
 .related-card-name {
-    font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-size: 1.1rem;
     color: var(--gold);
     text-align: center;
     margin-bottom: 0.5rem;
 }
 
 .related-card-price {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.9rem;
     color: rgba(250, 250, 250, 0.6);
     text-align: center;
@@ -2537,7 +2545,7 @@ html, body {
 }
 
 .como-funciona-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 300;
     color: rgba(250, 250, 250, 0.7);
@@ -2674,7 +2682,7 @@ html, body {
 }
 
 .steps-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.1rem;
     color: rgba(250, 250, 250, 0.6);
 }
@@ -2754,7 +2762,7 @@ html, body {
 }
 
 .step-description {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.7);
     line-height: 1.7;
@@ -3060,7 +3068,7 @@ margin-bottom: 1.5rem;
 line-height: 1.3;
 }
 .cta-description {
-font-family: 'Inter', sans-serif;
+font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
 font-size: 1.1rem;
 color: rgba(250, 250, 250, 0.7);
 margin-bottom: 2.5rem;
@@ -3182,7 +3190,7 @@ transform: translateX(5px);
 }
 
 .contacto-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 300;
     color: rgba(250, 250, 250, 0.7);
@@ -3241,7 +3249,7 @@ transform: translateX(5px);
 }
 
 .form-step-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.6);
     margin-bottom: 2rem;
@@ -3298,14 +3306,14 @@ transform: translateX(5px);
 }
 
 .motivo-title {
-    font-family: 'Cinzel', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.2rem;
     color: var(--gold);
     margin-bottom: 0.5rem;
 }
 
 .motivo-desc {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.9rem;
     color: rgba(250, 250, 250, 0.6);
     line-height: 1.4;
@@ -3348,7 +3356,7 @@ transform: translateX(5px);
 }
 
 .producto-name-form {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.95rem;
     color: rgba(250, 250, 250, 0.8);
 }
@@ -3393,7 +3401,7 @@ transform: translateX(5px);
 }
 
 .programacion-name {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.9rem;
     color: rgba(250, 250, 250, 0.8);
 }
@@ -3446,7 +3454,7 @@ transform: translateX(5px);
 .soporte-title,
 .info-title,
 .empresa-title {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.8);
 }
@@ -3458,7 +3466,7 @@ transform: translateX(5px);
 
 .form-group label {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.95rem;
     color: var(--gold);
     margin-bottom: 0.5rem;
@@ -3474,7 +3482,7 @@ transform: translateX(5px);
     border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 8px;
     padding: 0.875rem 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.9);
     transition: all 0.3s ease;
@@ -3495,7 +3503,7 @@ transform: translateX(5px);
 
 .form-hint {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.85rem;
     color: rgba(250, 250, 250, 0.5);
     margin-top: 0.5rem;
@@ -3503,7 +3511,7 @@ transform: translateX(5px);
 
 .form-counter {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.85rem;
     color: rgba(250, 250, 250, 0.5);
     text-align: right;
@@ -3518,7 +3526,7 @@ transform: translateX(5px);
 }
 
 .telefono-prefix {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: var(--gold);
     font-weight: 600;
@@ -3548,7 +3556,7 @@ transform: translateX(5px);
 }
 
 .checkbox-label span {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.95rem;
     color: rgba(250, 250, 250, 0.8);
 }
@@ -3637,7 +3645,7 @@ transform: translateX(5px);
 
 .form-security {
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.85rem;
     color: rgba(250, 250, 250, 0.5);
     margin-top: 1rem;
@@ -3839,7 +3847,7 @@ transform: translateX(5px);
 }
 
 .redes-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.6);
     margin-bottom: 2.5rem;
@@ -3918,7 +3926,7 @@ transform: translateX(5px);
 }
 
 .faq-text {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.1rem;
     color: rgba(250, 250, 250, 0.8);
     margin-bottom: 0.5rem;
@@ -3930,7 +3938,7 @@ transform: translateX(5px);
 }
 
 .faq-subtext {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 0.95rem;
     color: rgba(250, 250, 250, 0.5);
 }
@@ -4026,7 +4034,7 @@ transform: translateX(5px);
 }
 
 .historia-parrafo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.2rem;
     color: rgba(250, 250, 250, 0.8);
     line-height: 1.8;
@@ -4101,7 +4109,7 @@ transform: translateX(5px);
 }
 
 .mv-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.15rem;
     color: rgba(250, 250, 250, 0.8);
     line-height: 1.8;
@@ -4125,7 +4133,7 @@ transform: translateX(5px);
 }
 
 .valores-subtitle {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.2rem;
     color: rgba(250, 250, 250, 0.6);
 }
@@ -4276,7 +4284,7 @@ transform: translateX(5px);
 }
 
 .equipo-subtitle {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1.2rem;
     color: rgba(250, 250, 250, 0.6);
 }
@@ -4333,7 +4341,7 @@ transform: translateX(5px);
 
 .miembro-nombre {
     font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: var(--gold);
     margin-bottom: 0.5rem;
 }
@@ -4348,7 +4356,7 @@ transform: translateX(5px);
 }
 
 .miembro-bio {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     font-size: 1rem;
     color: rgba(250, 250, 250, 0.7);
     line-height: 1.6;
