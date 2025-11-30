@@ -1442,8 +1442,20 @@
             </div>
 
             </div>
+            </div>
         </section>
-</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js', { scope: '/' })
+      .then(reg => console.log('SW registrado en:', reg.scope))
+      .catch(err => console.error('Error registrando SW:', err));
+  });
+}
+</script>
+
     <!--Scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
