@@ -74,3 +74,521 @@
 .config-panel::-webkit-scrollbar-track {
     background: rgba(255,255,255,0.05);
 }
+
+
+/* =====================================================
+   ESTILOS DEL CONFIGURADOR DE PRODUCTOS
+   ===================================================== */
+
+/* Overlay del modal */
+.config-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.config-modal-overlay.active {
+    opacity: 1;
+}
+
+/* Modal principal */
+.config-modal {
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.98), rgba(15, 15, 15, 0.98));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.config-modal-overlay.active .config-modal {
+    transform: scale(1);
+}
+
+/* Header del modal */
+.config-modal-header {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.config-modal-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 0;
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--gold);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: rotate(90deg);
+}
+
+/* Body del modal */
+.config-modal-body {
+    padding: 2rem 2.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Info del producto */
+.config-product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.config-category {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    color: var(--gold-light);
+    text-transform: uppercase;
+}
+
+.config-price {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Instrucciones */
+.config-instructions {
+    margin-bottom: 2rem;
+}
+
+.config-instructions h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+}
+
+.config-instructions p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.7);
+    line-height: 1.6;
+}
+
+/* Grupos de configuración */
+.config-groups-container {
+    margin-bottom: 2rem;
+}
+
+.config-group-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.group-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.group-icon {
+    font-size: 1.3rem;
+}
+
+.group-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.75rem;
+}
+
+.config-option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.8);
+}
+
+.config-option-label:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+}
+
+.config-option-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--gold);
+    cursor: pointer;
+}
+
+.config-option-label input[type="checkbox"]:checked + span {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.show-more-btn {
+    grid-column: 1 / -1;
+    padding: 0.75rem;
+    background: transparent;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-style: solid;
+}
+
+/* Sección de contacto */
+.config-contact {
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.config-contact h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(250, 250, 250, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.telefono-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.telefono-prefix {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.telefono-wrapper input {
+    flex: 1;
+}
+
+/* Footer del modal */
+.config-modal-footer {
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-cancel,
+.btn-send-whatsapp {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: var(--gold);
+}
+
+.btn-cancel:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.btn-send-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: none;
+    color: white;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-send-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.selection-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Toast notifications */
+.config-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.98), rgba(15, 15, 15, 0.98));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.config-toast.show {
+    transform: translateX(0);
+}
+
+.config-toast.error {
+    border-color: rgba(255, 100, 100, 0.5);
+}
+
+.config-toast.success {
+    border-color: rgba(37, 211, 102, 0.5);
+}
+
+.toast-icon {
+    font-size: 1.5rem;
+}
+
+.toast-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .config-modal-overlay {
+        padding: 1rem;
+    }
+
+    .config-modal {
+        max-height: 95vh;
+        border-radius: 16px;
+    }
+
+    .config-modal-header {
+        padding: 1.5rem;
+    }
+
+    .config-modal-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-close {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+
+    .config-modal-body {
+        padding: 1.5rem;
+    }
+
+    .config-product-info {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    .config-instructions h3 {
+        font-size: 1.1rem;
+    }
+
+    .config-instructions p {
+        font-size: 0.9rem;
+    }
+
+    .config-group-item {
+        padding: 1.25rem;
+    }
+
+    .group-title {
+        font-size: 1rem;
+    }
+
+    .group-options {
+        grid-template-columns: 1fr;
+    }
+
+    .config-contact {
+        padding: 1.5rem;
+    }
+
+    .config-contact h3 {
+        font-size: 1.1rem;
+    }
+
+    .config-modal-footer {
+        padding: 1.25rem 1.5rem;
+        flex-direction: column;
+    }
+
+    .btn-cancel,
+    .btn-send-whatsapp {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .config-toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        padding: 1rem 1.25rem;
+    }
+
+    .toast-message {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .config-modal-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .config-price {
+        font-size: 1.3rem;
+    }
+
+    .config-instructions h3 {
+        font-size: 1rem;
+    }
+
+    .group-title {
+        font-size: 0.95rem;
+    }
+
+    .config-option-label {
+        font-size: 0.85rem;
+        padding: 0.625rem 0.875rem;
+    }
+}
+
+/* Scrollbar personalizado para el modal */
+.config-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.config-modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.config-modal-body::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+}
+
+.config-modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.5);
+}
+
+/* Mensaje cuando no hay opciones de configuración */
+.no-config {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: rgba(250, 250, 250, 0.5);
+    font-style: italic;
+}

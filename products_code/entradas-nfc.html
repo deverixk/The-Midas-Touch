@@ -28,6 +28,10 @@
     <!--Estilos-->
     <link rel="stylesheet" href="../styles_desktop.css">
     <link rel="stylesheet" href="../styles_movil.css">
+
+    <!-- Estilos exclusivos -->
+    <link rel="stylesheet" href="/products_code/styles_desktop_productos.css">
+    <link rel="stylesheet" href="/products_code/styles_movil_productos.css">
 </head>
 
 <body>
@@ -99,33 +103,110 @@
                     </ul>
                 </div>
 
-                <!-- Opciones de Configuración NFC -->
-                <div class="details-box">
+                <!-- ===== NUEVA CONFIGURACIÓN NFC ===== -->
+                <div class="details-box config-panel">
                     <h3 class="details-box-title">Configuración NFC</h3>
-                    <div class="config-options">
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config1" value="ticket">
-                            <label for="config1">Entrada Digital (validación QR + NFC)</label>
+                    <p class="config-subtitle">Todo lo que puede hacer</p>
+
+                    <!-- Grupo 1 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Acceso directo al Ticket Digital</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config2" value="event-info">
-                            <label for="config2">Información del Evento (horario, lineup, mapa)</label>
+
+                        <ul class="group-list">
+                            <li>• URL al boleto digital (PDF/JPG)</li>
+                            <li>• Acceso directo a un código QR del evento</li>
+                            <li>• Enlace a la página de validación del ticket</li>
+                            <li>• Boleto digital personalizado con nombre del comprador</li>
+                            <li>• Boleto con la zona, fila, asiento y hora</li>
+                            <li>• Boleto que muestra animación o diseño especial</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 2 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Verificación o Check-in del asistente</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config3" value="location">
-                            <label for="config3">Ubicación del Evento (GPS + direcciones)</label>
+
+                        <ul class="group-list">
+                            <li>• Link para marcar asistencia</li>
+                            <li>• Sistema de check-in mediante Google Forms</li>
+                            <li>• Página que confirma si el ticket es válido</li>
+                            <li>• Panel con “Ingreso Aprobado”/“Acceso Denegado”</li>
+                            <li>• Redirección a un panel donde se muestra el ID del usuario</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 3 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Información del evento</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config4" value="vip-access">
-                            <label for="config4">Acceso VIP (áreas exclusivas, beneficios)</label>
+
+                        <ul class="group-list">
+                            <li>• Fecha, hora y ubicación</li>
+                            <li>• Instrucciones de acceso y zonas</li>
+                            <li>• Reglamento del evento</li>
+                            <li>• Listado de artistas invitados / horarios por etapas</li>
+                            <li>• Detalles del festival / conferencia / concierto</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo  -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Multimedias especiales del evento</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config5" value="attendee">
-                            <label for="config5">Datos del Asistente (networking, contacto)</label>
+
+                        <ul class="group-list">
+                            <li>• Video promocional</li>
+                            <li>• Playlist del concierto/festival</li>
+                            <li>• Galería de fotos del artista/ponente</li>
+                            <li>• Mensaje especial o bienvenida del organizador</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo  -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Beneficios y extras según tipo de ticket</span>
+                        </div>
+
+                        <ul class="group-list">
+                            <li>• Acceso VIP / Backstage</li>
+                            <li>• Open bar / canje de bebida / cortesía</li>
+                            <li>• Zona preferente</li>
+                            <li>• Preregistro para dinámicas</li>
+                            <li>• Contenido secreto desbloqueable</li>
+                            <li>• Acceso prioritario a futuras preventas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo  -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Tickets coleccionables con contenido único</span>
+                        </div>
+
+                        <ul class="group-list">
+                            <li>• Tarjetas de edición limitada con animación al escanear</li>
+                            <li>• “Pase coleccionable” con diseño del artista</li>
+                            <li>• Mensaje oculto que cambia después del evento</li>
+                            <li>• Certificado digital de asistencia</li>
+                            <li>• Arte exclusivo desbloqueable</li>
+                            <li>• Video del artista agradeciendo a quienes compraron VIP</li>
+                        </ul>
+                    </div>
+
+                     <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Si deseas conocer más funciones, ve a contacto.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Separador decorativo -->
@@ -168,5 +249,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="../product-page.js"></script>
+    <script src="product-configurator.js"></script>
 </body>
 </html>

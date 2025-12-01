@@ -28,6 +28,10 @@
     <!--Estilos-->
     <link rel="stylesheet" href="../styles_desktop.css">
     <link rel="stylesheet" href="../styles_movil.css">
+
+    <!-- Estilos exclusivos -->
+    <link rel="stylesheet" href="/products_code/styles_desktop_productos.css">
+    <link rel="stylesheet" href="/products_code/styles_movil_productos.css">
 </head>
 
 <body>
@@ -99,37 +103,100 @@
                     </ul>
                 </div>
 
-                <!-- Opciones de Configuración NFC -->
-                <div class="details-box">
+                <!-- ===== NUEVA CONFIGURACIÓN NFC ===== -->
+                <div class="details-box config-panel">
                     <h3 class="details-box-title">Configuración NFC</h3>
-                    <div class="config-options">
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config1" value="menu">
-                            <label for="config1">Menú Digital (carta completa con fotos y precios)</label>
+                    <p class="config-subtitle">Todo lo que puede hacer</p>
+
+                    <!-- Grupo 1 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Menú Digital</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config2" value="business-info">
-                            <label for="config2">Información del Negocio (horarios, ubicación, contacto)</label>
+
+                        <ul class="group-list">
+                            <li>• URL al menú digital principal</li>
+                            <li>• Menú en PDF</li>
+                            <li>• Menú con fotos y precios actualizados</li>
+                            <li>• Menú por categorías (bebidas, postres, especiales)</li>
+                            <li>• Menú de desayuno / comida / cena</li>
+                            <li>• Menú con alérgenos</li>
+                            <li>• Menú en múltiples idiomas</li>
+                            <li>• Menú interactivo con animaciones</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 2 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Pedido directo</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config3" value="promotions">
-                            <label for="config3">Promociones y Ofertas (actualizables)</label>
+
+                        <ul class="group-list">
+                            <li>• Link para pedir desde el celular sin llamar mesero</li>
+                            <li>• Sistema de autopedido del restaurante</li>
+                            <li>• Pedido por WhatsApp con formato automático</li>
+                            <li>• Pedido vía Google Forms con mesa preseleccionada</li>
+                            <li>• Conexión directa a apps internas de ordering</li>
+                            <li>• "Volver a pedir lo mismo" (pedido rápido)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 3 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Pagos rápidos</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config4" value="social">
-                            <label for="config4">Redes Sociales (Instagram, Facebook, TikTok)</label>
+
+                        <ul class="group-list">
+                            <li>• Link de pago (MercadoPago, Stripe, PayPal)</li>
+                            <li>• Pago de la cuenta por celular</li>
+                            <li>• División de cuenta por persona</li>
+                            <li>• Pago anticipado de reservación</li>
+                            <li>• Pago de propina desde el móvil</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo  -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Reservaciones</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config5" value="reviews">
-                            <label for="config5">Reseñas (link directo a Google/TripAdvisor)</label>
+
+                        <ul class="group-list">
+                            <li>• Reservación automática vía web</li>
+                            <li>• Reservación vía WhatsApp</li>
+                            <li>• Reservación de mesa o zona especial</li>
+                            <li>• Lista de espera digital</li>
+                            <li>• Confirmación automática de reserva</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo  -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Información del lugar</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config6" value="wifi">
-                            <label for="config6">WiFi del Establecimiento (conexión automática)</label>
+
+                        <ul class="group-list">
+                            <li>• Ubicación en Google Maps</li>
+                            <li>• Horarios del restaurante</li>
+                            <li>• Carta de vinos o mixología</li>
+                            <li>• Promociones del día</li>
+                            <li>• Eventos especiales (música, happy hour)</li>
+                            <li>• Política de mascotas y niños</li>
+                            <li>• Información del chef o historia del lugar</li>
+                            <li>• Fotos del establecimiento</li>
+                        </ul>
+                    </div>
+
+                     <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Si deseas conocer más funciones, ve a contacto.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Separador decorativo -->
@@ -172,5 +239,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="../product-page.js"></script>
+    <script src="product-configurator.js"></script>
 </body>
 </html>

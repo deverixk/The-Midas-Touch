@@ -28,6 +28,10 @@
     <!--Estilos-->
     <link rel="stylesheet" href="../styles_desktop.css">
     <link rel="stylesheet" href="../styles_movil.css">
+
+    <!-- Estilos exclusivos -->
+    <link rel="stylesheet" href="/products_code/styles_desktop_productos.css">
+    <link rel="stylesheet" href="/products_code/styles_movil_productos.css">
 </head>
 
 <body>
@@ -99,37 +103,144 @@
                     </ul>
                 </div>
 
-                <!-- Opciones de Configuración NFC -->
-                <div class="details-box">
+                <!-- ===== CONFIGURACIÓN NFC ===== -->
+                <div class="details-box config-panel">
                     <h3 class="details-box-title">Configuración NFC</h3>
-                    <div class="config-options">
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config1" value="song">
-                            <label for="config1">"Nuestra Canción" (Spotify/Apple Music)</label>
+                    <p class="config-subtitle">Todo lo que puede hacer</p>
+
+                    <!-- Grupo 1 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>URLs románticas</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config2" value="location">
-                            <label for="config2">Lugar del Primer Encuentro (GPS + fotos)</label>
+
+                        <ul class="group-list">
+                            <li>• Página web personalizada para la pareja</li>
+                            <li>• Álbum de fotos online privado (Google Photos, Drive, OneDrive)</li>
+                            <li>• Video especial (YouTube oculto, Vimeo privado)</li>
+                            <li>• Página con carta digital o poema</li>
+                            <li>• Playlist de música (Spotify, Apple Music, YouTube Music)</li>
+                            <li>• URL que abre un mapa del lugar donde se conocieron</li>
+                            <li>• Cuenta regresiva para una fecha importante (aniversario, boda)</li>
+                            <li>• Página sorpresa con fotos que cambian por temporada</li>
+                            <li>• URL a un formulario de “preguntas para conocernos mejor”</li>
+                            <li>• URL a una página tipo “libro de recuerdos”</li>
+                            <li>• URL que abre un juego para parejas (verdad o reto, retos diarios, etc.)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 2 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Mensajes especiales</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config3" value="date">
-                            <label for="config3">Fecha Importante (aniversario, contador de días)</label>
+
+                        <ul class="group-list">
+                            <li>• Nota de amor personalizada</li>
+                            <li>• Mensaje secreto que solo se lee al tocar la tarjeta</li>
+                            <li>• “Razones por las que te amo”</li>
+                            <li>• Promesas de pareja</li>
+                            <li>• Carta que cambia según la fecha</li>
+                            <li>• Mensaje programado como “abre cuando...”</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 3 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Contenido multimedia</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config4" value="gallery">
-                            <label for="config4">Galería de Recuerdos (álbum de fotos privado)</label>
+
+                        <ul class="group-list">
+                            <li>• Canción especial de la relación</li>
+                            <li>• Playlist personalizada</li>
+                            <li>• Video sorpresa grabado por la pareja</li>
+                            <li>• Colección de fotos del último viaje</li>
+                            <li>• Presentación con música tipo historia de amor</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 4 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Mini experiencias digitales</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config5" value="message">
-                            <label for="config5">Carta de Amor Digital (mensaje + multimedia)</label>
+
+                        <ul class="group-list">
+                            <li>• Test de compatibilidad</li>
+                            <li>• Ruleta romántica de actividades para citas</li>
+                            <li>• Generador de ideas de citas personalizadas</li>
+                            <li>• Pase VIP para una “cita secreta”</li>
+                            <li>• Código de acceso para un juego digital de pareja</li>
+                            <li>• “Reto del día” automático (random)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 5 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Fechas importantes</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config6" value="video">
-                            <label for="config6">Video Especial (YouTube/Vimeo privado)</label>
+
+                        <ul class="group-list">
+                            <li>• Calendario compartido</li>
+                            <li>• Recordatorio automático del aniversario</li>
+                            <li>• Agenda de metas de pareja</li>
+                            <li>• Lista de deseos que van logrando juntos</li>
+                            <li>• Ruta de lugares pendientes por visitar</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 6 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Ubicaciones con significado</span>
+                        </div>
+
+                        <ul class="group-list">
+                            <li>• Coordenadas exactas donde se conocieron</li>
+                            <li>• Lugar del primer beso</li>
+                            <li>• Restaurante o sitio favorito</li>
+                            <li>• Mapa para una cita sorpresa programada</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 6 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Regalos digitales</span>
+                        </div>
+
+                        <ul class="group-list">
+                            <li>• Tarjeta digital con diseño personalizado</li>
+                            <li>• Vale romántico (masaje, cena, día especial)</li>
+                            <li>• Colección de cupones sorpresa</li>
+                            <li>• Pase digital para un viaje futuro</li>
+                            <li>• Contrato simbólico de pareja</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Contenido privado</span>
+                        </div>
+
+                        <ul class="group-list">
+                            <li>• Carpeta privada con fotos/videos</li>
+                            <li>• Mensajes que solo abren con contraseña</li>
+                            <li>• Diario íntimo de pareja</li>
+                            <li>• Cofre digital de recuerdos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Si deseas conocer más funciones, ve a contacto.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Separador decorativo -->
@@ -180,5 +291,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="../product-page.js"></script>
+    <script src="product-configurator.js"></script>
 </body>
 </html>

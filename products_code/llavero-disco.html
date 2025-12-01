@@ -28,6 +28,10 @@
     <!--Estilos-->
     <link rel="stylesheet" href="../styles_desktop.css">
     <link rel="stylesheet" href="../styles_movil.css">
+
+    <!-- Estilos exclusivos -->
+    <link rel="stylesheet" href="/products_code/styles_desktop_productos.css">
+    <link rel="stylesheet" href="/products_code/styles_movil_productos.css">
 </head>
 
 <body>
@@ -99,33 +103,78 @@
                     </ul>
                 </div>
 
-                <!-- Opciones de Configuración NFC -->
-                <div class="details-box">
+                <!-- ===== NUEVA CONFIGURACIÓN NFC ===== -->
+                <div class="details-box config-panel">
                     <h3 class="details-box-title">Configuración NFC</h3>
-                    <div class="config-options">
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config1" value="spotify">
-                            <label for="config1">Canción de Spotify (link directo)</label>
+                    <p class="config-subtitle">Todo lo que puede hacer</p>
+
+                    <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Basicos</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config2" value="apple-music">
-                            <label for="config2">Canción de Apple Music</label>
+
+                        <ul class="group-list">
+                            <li>• Canción específica</li>
+                            <li>• Album</li>
+                            <li>• Artista</li>
+                            <li>• Playlist personalizada</li>
+                            <li>• Lista de reproducción global</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 1 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Apps</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config3" value="youtube">
-                            <label for="config3">Video Musical de YouTube</label>
+
+                        <ul class="group-list">
+                            <li>• Spotify</li>
+                            <li>• Apple Music</li>
+                            <li>• Youtube Music</li>
+                            <li>• Amazon Music</li>
+                            <li>• SoundCloud</li>
+                            <li>(Preguntar por otra app)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 2 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Álbum musical personalizado</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config4" value="playlist">
-                            <label for="config4">Playlist Completa (cualquier plataforma)</label>
+
+                        <ul class="group-list">
+                            <li>• Álbum digital hecho por ti (con fotos + música)</li>
+                            <li>• Playlist de “nuestras canciones”</li>
+                            <li>• Lista de reproducción que inicia inmediatamente al escanear</li>
+                            <li>• Playlist con el título del CD real del llavero</li>
+                        </ul>
+                    </div>
+
+                    <!-- Grupo 3 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Experiencia tipo “CD físico”</span>
                         </div>
-                        <div class="config-option">
-                            <input type="radio" name="nfc-config" id="config5" value="message">
-                            <label for="config5">Mensaje + Canción (dedicatoria especial)</label>
+
+                        <ul class="group-list">
+                            <li>• Página que simula un reproductor de CD vintage</li>
+                            <li>• Portada de CD digital + canciones especiales</li>
+                            <li>• Créditos estilo álbum (dedicatorias, mensajes, fechas)</li>
+                            <li>• “Tracklist de nuestra relación”</li>
+                            <li>• “CD edición limitada” con fotos y animaciones</li>
+                        </ul>
+                    </div>
+
+                     <!-- Grupo 0 -->
+                    <div class="config-group">
+                        <div class="group-header">
+                            <span>Si deseas conocer más funciones, ve a contacto.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Separador decorativo -->
@@ -176,5 +225,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="../product-page.js"></script>
+    <script src="product-configurator.js"></script>
 </body>
 </html>
