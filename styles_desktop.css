@@ -4512,3 +4512,31 @@ line-height: 1.6;
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
 }
+
+/* =====================================================
+   BADGES DE ESTADO PARA PRODUCTOS
+   ===================================================== */
+
+/* ===== BADGE AGOTADO ===== */
+.product-badge-agotado {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 0.5rem 3rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    z-index: 10;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shine {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
