@@ -400,7 +400,7 @@ class ProductConfigurator {
 
         mensaje += `\n━━━━━━━━━━━━━━━━━━━━\n`;
         mensaje += ` ${this.getCurrentDateTime()}\n`;
-        mensaje += `\n_Enviado desde themidastuch.com_`;
+        mensaje += `\n_Enviado desde themidastouch.shop_`;
 
         return mensaje;
     }
