@@ -20,31 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
             categoria: "GIFT SERIES",
             titulo: "Llavero de Musica",
             desc: "Un llavero que puedes llevar a todos lados; al contacto con tu dispositivo, abre tu canción preferida o esa canción especial.",
-            precio: "$0"
+            precio: "$229"
+        },
+                {
+            categoria: "GIFT SERIES",
+            titulo: "Llavero de parejas",
+            desc: "Llavero especial revela los recuerdos más preciados; la canción que define una relación, una ubicación de primer encuentro o una fecha importante.",
+            precio: "$199"
         },
         {
             categoria: "PREMIUM SERIES",
             titulo: "Tarjeta NFC",
             desc: "Tarjeta premium. Programable para contacto, redes sociales o URL personalizada, diseñada para tareas específicas, presiona para ver detalles.",
-            precio: "$0"
+            precio: "$229"
         },
-        {
-            categoria: "GIFT SERIES",
-            titulo: "Llavero de parejas",
-            desc: "Llavero especial revela los recuerdos más preciados; la canción que define una relación, una ubicación de primer encuentro o una fecha importante.",
-            precio: "$0"
-        },
+
         {
             categoria: "BUSINESS SERIES",
             titulo: "Menu Holder",
             desc: "Un holder menu perfecto para colocar en la mesa, o en cualquier lugar y que tus clientes puedan abrir el menú de tu establecimiento.",
-            precio: "$0"
+            precio: "$199"
         },
         {
             categoria: "PROXIMAMENTE",
             titulo: "Proximamente",
             desc: "Proximamente.",
-            precio: "$0"
+            precio: "$DESCUBRE"
         },
     ];
     
@@ -192,11 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
  // Mapeo de productos a sus páginas
     const productPages = [
-        'products_code/llavero-disco.html',    // index 
+        'products_code/llavero-disco.html',    // index
+        'products_code/llavero-parejas.html',  // index  
         'products_code/tarjeta-nfc-black.html',// index 
-        'products_code/llavero-parejas.html',  // index 
         'products_code/card-holder.html',      // index 
-        'products_code/proximamente.html'      // index 
+        //'products_code/proximamente.html'      // index 
     ];
 
     // Event listener para el botón CTA "Ver detalles"

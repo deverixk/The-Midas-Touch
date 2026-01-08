@@ -4540,3 +4540,95 @@ line-height: 1.6;
     0%, 100% { transform: translateX(-100%); }
     50% { transform: translateX(100%); }
 }
+
+/* ===== SISTEMA DE DESCUENTOS ===== */
+
+/* Para el catálogo (product-card) */
+.product-card-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-card-price-original {
+    font-family: 'Inter', serif;
+    font-size: 1.5rem;
+    color: rgba(250, 250, 250, 0.65);
+    font-weight: 500;
+    text-decoration: line-through;
+    text-decoration-thickness: 2.5px;
+    text-decoration-color: #FF6B6B;
+    position: relative;
+    padding-left: 3.5rem;
+}
+
+.product-card-price-original::before {
+    content: 'ANTES';
+    position: absolute;
+    left: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255, 107, 107, 0.9);
+    background: rgba(255, 107, 107, 0.15);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.05rem;
+}
+
+.product-card-price-original span {
+    font-size: 0.9rem;
+}
+
+/* Para la página individual del producto */
+.price-wrapper-with-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.price-original-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.product-price-original {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: rgba(250, 250, 250, 0.65);
+    text-decoration: line-through;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #FF6B6B;
+}
+
+.price-currency-original {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(250, 250, 250, 0.55);
+}
+
+.price-original-wrapper::before {
+    content: 'ANTES';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #FF6B6B;
+    background: rgba(255, 107, 107, 0.15);
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    letter-spacing: 0.1rem;
+}
+
+.price-discount-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
