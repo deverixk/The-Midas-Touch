@@ -2554,49 +2554,76 @@ html, body {
     margin: 6rem auto;
 }
 
-/* ===== 2. VIDEO SHOWCASE ===== */
-.video-showcase {
-    margin-bottom: 6rem;
-}
-
-.video-wrapper {
+/* ===== 2. CARRUSEL DE REELS VERTICAL ===== */
+.reels-carousel-wrapper {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.reels-carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 4rem;
+}
+
+.reels-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Items individuales de Reel */
+.reel-item {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reel-video-container {
+    position: relative;
+    width: 280px;
+    height: 498px;
     border-radius: 20px;
     overflow: hidden;
+    background: #000;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
 }
 
-.video-thumbnail {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    cursor: pointer;
-    overflow: hidden;
-    background: #000;
+.reel-video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(212, 175, 55, 0.3);
+    border-color: rgba(212, 175, 55, 0.4);
 }
 
-.video-thumbnail img {
+.reel-iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    border: none;
 }
 
-.video-thumbnail:hover img {
-    transform: scale(1.05);
+.reel-caption {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(250, 250, 250, 0.6);
+    margin-top: 1.25rem;
+    font-style: italic;
 }
 
-.play-button {
+/* Botones de navegación */
+.reel-nav-btn {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--gold-dark), var(--gold));
     border: none;
     border-radius: 50%;
@@ -2604,56 +2631,150 @@ html, body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
-.play-button svg {
-    width: 30px;
-    height: 30px;
+.reel-nav-btn svg {
+    width: 24px;
+    height: 24px;
     color: var(--black);
-    margin-left: 5px;
 }
 
-.play-button:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+.reel-nav-btn:hover {
+    transform: translateY(-50%) scale(1.1);
     box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
 }
 
-.video-duration {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-family: 'Inter', sans-serif;
+.reel-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
-.video-wrapper video {
-    display: none;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
+.reel-prev {
+    left: 0;
 }
 
-.video-wrapper video.playing {
-    display: block;
+.reel-next {
+    right: 0;
 }
 
-.video-thumbnail.hidden {
-    display: none;
+/* Desactivar botones en los extremos */
+.reel-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
-.video-caption {
+/* Indicadores de posición */
+.reels-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator:hover {
+    background: rgba(212, 175, 55, 0.4);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: var(--gold);
+    width: 30px;
+    border-radius: 5px;
+    border-color: var(--gold);
+}
+
+/* Instrucción de deslizar */
+.reels-hint {
     text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: rgba(250, 250, 250, 0.5);
+    font-size: 0.9rem;
+    color: rgba(250, 250, 250, 0.4);
     margin-top: 2rem;
     font-style: italic;
+    animation: pulseHint 2s ease-in-out infinite;
+}
+
+@keyframes pulseHint {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+}
+
+/* Controles del video */
+.reel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reel-play-btn,
+.reel-sound-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.reel-play-btn {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reel-play-btn svg {
+    width: 28px;
+    height: 28px;
+    color: var(--gold);
+    margin-left: 3px;
+}
+
+.reel-play-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.reel-play-btn.playing {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reel-sound-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+}
+
+.reel-sound-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+}
+
+.reel-sound-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: scale(1.1);
 }
 
 /* ===== 3. STEPS TIMELINE ===== */

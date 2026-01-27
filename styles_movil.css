@@ -1168,25 +1168,127 @@
         width: 90%;
     }
 
-    /* Video */
-    .video-showcase {
-        margin-bottom: 4rem;
+    /* =====================================================
+   CARRUSEL DE REELS - VERSIÓN MÓVIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+    
+    /* Ajustes del header */
+    .como-funciona-section {
+        padding: 5rem 1.5rem 4rem;
     }
 
-    .play-button {
-        width: 60px;
-        height: 60px;
+    .como-funciona-header {
+        margin-bottom: 3rem;
     }
 
-    .play-button svg {
+    .como-funciona-title {
+        font-size: 2rem;
+    }
+
+    .como-funciona-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Wrapper del carrusel */
+    .reels-carousel-wrapper {
+        padding: 1rem 0 3rem;
+    }
+
+    .reels-carousel-container {
+        padding: 1rem 0;
+        overflow: visible;
+    }
+
+    /* Track centrado */
+    .reels-track {
+        gap: 1.5rem;
+        padding: 0 calc(50vw - 140px); /* Centra el primer video */
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE */
+    }
+
+    .reels-track::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+
+    /* Items de reel en móvil */
+    .reel-item {
+        flex: 0 0 280px;
+        scroll-snap-align: center;
+    }
+
+    .reel-video-container {
+        width: 280px;
+        height: 498px;
+    }
+
+    .reel-caption {
+        font-size: 0.85rem;
+        margin-top: 1rem;
+    }
+
+    /* Ocultar botones de navegación en móvil */
+    .reel-nav-btn {
+        display: none;
+    }
+
+    /* Indicadores más grandes en móvil */
+    .reels-indicators {
+        margin-top: 2rem;
+        gap: 0.5rem;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .indicator.active {
         width: 24px;
-        height: 24px;
     }
 
-    .video-duration {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
+    /* Hint visible en móvil */
+    .reels-hint {
+        font-size: 0.85rem;
+        margin-top: 1.5rem;
     }
+}
+
+/* Pantallas muy pequeñas (< 400px) */
+@media (max-width: 400px) {
+    
+    .como-funciona-title {
+        font-size: 1.75rem;
+    }
+
+    .como-funciona-description {
+        font-size: 0.9rem;
+    }
+
+    /* Videos más pequeños */
+    .reel-item {
+        flex: 0 0 240px;
+    }
+
+    .reel-video-container {
+        width: 240px;
+        height: 427px; /* Mantiene proporción 9:16 */
+    }
+
+    .reels-track {
+        padding: 0 calc(50vw - 120px);
+        gap: 1rem;
+    }
+
+    .reel-caption {
+        font-size: 0.8rem;
+    }
+}
 
     /* Steps */
     .steps-section {
