@@ -96,7 +96,7 @@ class ProductConfigurator {
 
                     <!-- Instrucciones -->
                     <div class="config-instructions">
-                        <h3> ¿Cómo quieres configurar tu NFC?</h3>
+                        <h3> ¿Cómo quieres configurar tu NFC? (Preguntar sobre funcionamiento)</h3>
                         <p>Selecciona una o más opciones de configuración que necesites:</p>
                     </div>
 
