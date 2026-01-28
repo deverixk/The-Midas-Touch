@@ -213,6 +213,8 @@ class ProductConfigurator {
 
         // Checkboxes
         const checkboxes = overlay.querySelectorAll('input[type="checkbox"]');
+        let hasScrolled = false;
+        
         checkboxes.forEach(cb => {
             cb.addEventListener('change', (e) => {
                 const groupId = e.target.dataset.group;
@@ -226,6 +228,15 @@ class ProductConfigurator {
                 
                 if (e.target.checked) {
                     groupOptions.push(value);
+                    
+                    if (!hasScrolled) {
+                        const contactSection = overlay.querySelector('.config-contact');
+                        setTimeout(() => {
+                            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 300);
+                        hasScrolled = true;
+                    }
+                    
                 } else {
                     const index = groupOptions.indexOf(value);
                     if (index > -1) groupOptions.splice(index, 1);
